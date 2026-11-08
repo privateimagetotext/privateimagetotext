@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "Private Image to Text — Private browser OCR",
+  "short_name": "Image to Text",
+  "description": "Extract text from images for free without uploading them, and hide or reveal messages entirely in this browser.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5F2EA",
+  "theme_color": "#315EFB",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+MONTHLY RESEARCH BULLETIN
+Edition LAYOUT-H55
+LEFT ANALYSIS
+Anchor LAYOUT-L21
+The first analysis stays before the summary.
+Left conclusions finish here.
+RIGHT SUMMARY
+Anchor LAYOUT-R89
+The summary follows after the left analysis.
+Right conclusions finish here.

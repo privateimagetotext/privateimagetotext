@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Private Image to Text</title>
+  <rect width="128" height="128" rx="28" fill="#315efb"/>
+  <path d="M34 28v72h54" fill="none" stroke="#fffefa" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54 44h40M54 64h32M54 84h38" fill="none" stroke="#fffefa" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,4 @@
+SMALL PRINT SAMPLE
+This compact image uses 17px text to establish the current small-image baseline.
+Reference SMALL-991 remains important.
+Accents stay exact: café, naïve, façade.

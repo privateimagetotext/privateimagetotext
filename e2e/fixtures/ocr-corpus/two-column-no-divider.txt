@@ -1,0 +1,10 @@
+LEFT FIELD NOTES
+Anchor LAYOUT-L17
+Local recognition keeps this paragraph together.
+The left story finishes before the next column.
+End of the left passage.
+RIGHT FIELD NOTES
+Anchor LAYOUT-R83
+The second story follows on the right.
+Its lines retain their own sequence.
+End of the right passage.

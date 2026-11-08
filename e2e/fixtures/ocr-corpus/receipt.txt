@@ -1,0 +1,8 @@
+NORTH STAR MARKET
+Receipt 000742
+Notebook               $12.50
+Desk lamp              $21.00
+Cable                   $4.95
+TOTAL                  $38.45
+Payment: CARD-3180
+Thank you for testing local OCR.

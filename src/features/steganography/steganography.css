@@ -1,0 +1,414 @@
+.steg-disclosure,
+.steg-boundaries {
+  width: min(1180px, calc(100% - 40px));
+  margin: 28px auto 0;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  background: var(--surface);
+}
+
+.steg-disclosure h2,
+.steg-boundaries h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.steg-disclosure p,
+.steg-boundaries p {
+  max-width: 80ch;
+}
+
+.steg-disclosure ul {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.steg-workspace {
+  width: min(1180px, calc(100% - 40px));
+  margin: 72px auto 0;
+}
+
+.steg-workflow,
+.steg-protection {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.steg-workflow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.steg-workflow legend,
+.steg-protection legend {
+  width: 100%;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.steg-workflow label,
+.steg-protection > label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.steg-workflow label.is-selected,
+.steg-protection > label.is-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.steg-workflow input,
+.steg-protection input[type="radio"] {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.steg-workflow span,
+.steg-protection > label span {
+  display: grid;
+  gap: 3px;
+}
+
+.steg-workflow small,
+.steg-protection small {
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.steg-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.steg-card {
+  min-width: 0;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.steg-card__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.steg-card__heading > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.steg-card__heading h2,
+.steg-result h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.steg-dropzone {
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+  padding: 28px 18px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 0.55rem;
+  background: var(--surface-soft);
+  text-align: center;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.steg-dropzone.is-dragging {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+
+.steg-dropzone__title {
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.steg-dropzone p:not(.steg-dropzone__title) {
+  margin: 8px 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.steg-dropzone__actions,
+.steg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.steg-file-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.steg-file-facts div {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--surface-soft);
+}
+
+.steg-file-facts dt {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.steg-file-facts dd {
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.steg-source-preview,
+.steg-result img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: repeating-conic-gradient(#d8d8d8 0 25%, #f4f4f4 0 50%) 0 / 18px 18px;
+  object-fit: contain;
+}
+
+.steg-working-canvas {
+  display: none;
+}
+
+.steg-card label > span:first-child:not(.step-number) {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 800;
+}
+
+.steg-message,
+.steg-revealed-text {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  font-family: var(--font-mono);
+  line-height: 1.55;
+}
+
+.steg-capacity {
+  margin: 8px 0 20px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.steg-capacity.is-over {
+  color: var(--danger);
+  font-weight: 800;
+}
+
+.steg-protection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.technical-details.steg-format-details {
+  grid-column: 1 / -1;
+  margin-top: 0;
+  padding: 0.45rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+}
+
+.technical-details.steg-format-details summary {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.steg-protection legend,
+.steg-warning,
+.steg-password-grid {
+  grid-column: 1 / -1;
+}
+
+.steg-warning {
+  margin: 4px 0 0;
+  padding: 14px;
+  border-radius: 10px;
+  line-height: 1.55;
+}
+
+.steg-warning--danger {
+  border: 1px solid color-mix(in srgb, var(--danger) 45%, var(--border));
+  background: color-mix(in srgb, var(--danger) 8%, var(--surface));
+}
+
+.steg-password-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.steg-password-grid input:not([type="checkbox"]),
+.steg-card input[type="password"],
+.steg-card input[type="text"] {
+  width: 100%;
+}
+
+.steg-checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+}
+
+.steg-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.steg-progress,
+.steg-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: var(--surface);
+}
+
+.steg-progress__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-strong);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: steg-spin 800ms linear infinite;
+}
+
+.steg-error {
+  align-items: flex-start;
+  border-color: color-mix(in srgb, var(--danger) 45%, var(--border));
+}
+
+.steg-error p {
+  margin: 0;
+}
+
+.steg-result img {
+  margin: 0 0 18px;
+}
+
+.steg-result__download-warning {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--warning) 42%, var(--border));
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--warning) 8%, var(--surface));
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.steg-result__download-warning strong {
+  color: var(--ink);
+}
+
+.steg-disclosure > p,
+.steg-boundaries p + p {
+  margin-top: 0.9rem;
+}
+
+.steg-boundaries {
+  margin-bottom: 72px;
+}
+
+@keyframes steg-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .steg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .steg-disclosure,
+  .steg-boundaries,
+  .steg-workspace {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .steg-workflow,
+  .steg-protection,
+  .steg-password-grid,
+  .steg-file-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .steg-protection legend,
+  .steg-warning,
+  .steg-password-grid {
+    grid-column: auto;
+  }
+
+  .steg-dropzone__actions,
+  .steg-actions {
+    flex-direction: column;
+  }
+
+  .steg-dropzone__actions > *,
+  .steg-actions > * {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steg-progress__spinner {
+    animation: none;
+  }
+}

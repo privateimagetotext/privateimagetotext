@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "expectationsLockedAt": "2026-09-06T02:49:14.166343+00:00",
+  "candidateEvaluatedBeforeExpectationLock": false,
+  "sourceCorpusManifestSha256": "fc702260a034ec5292507661446cb160be090802ce42ffa6faeb79759c91f78d",
+  "scope": "Nine pages unused by the original corpus acceptance. Existing source documents are shared: this is a held-out page set, not independent unseen-document or publisher coverage. Expectations were chosen from pypdf extraction and Poppler visual review before candidate execution.",
+  "gaps": [
+    "Real very-short (under80 meaningful characters) uppercase/non-Latin selectable text",
+    "Real punctuation-only or repeated-garbage negative documents",
+    "New publishers/document producers outside the original government corpus",
+    "Human comparison of candidate output has not been performed"
+  ],
+  "cases": [
+    {
+      "id": "heldout-irs-w4-p4",
+      "sourceId": "irs-w4",
+      "filename": "irs-w4.pdf",
+      "sourceUrl": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+      "rightsReference": "corpus.json#irs-w4",
+      "bytes": 208845,
+      "sha256": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+      "page": 4,
+      "category": "dotted-leader blank worksheet",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "Deductions Worksheet",
+        "Qualified overtime compensation",
+        "Cash gifts to charities"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "Dense labels, values and dot leaders remain meaningful selectable text.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 6194,
+        "embeddedTextSha256": "16ae62d2bc8766371b87e31d5a2c42098f939261b2300f4332e0d289c3d116c2",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "Deductions Worksheet": true,
+          "Qualified overtime compensation": true,
+          "Cash gifts to charities": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "0eebcff54944a83c13e0a84aa3a8f1580acfd4b3e67a1aa62bdd8f89f5db385b",
+        "sourceSizePoints": [
+          611.976,
+          791.968
+        ]
+      }
+    },
+    {
+      "id": "heldout-irs-941-p2",
+      "sourceId": "irs-941",
+      "filename": "irs-941.pdf",
+      "sourceUrl": "https://www.irs.gov/pub/irs-pdf/f941.pdf",
+      "rightsReference": "corpus.json#irs-941",
+      "bytes": 841648,
+      "sha256": "38a3d8cf7a455101d52543c8c48e66202bc25c189ead878627e35c797c88e2ad",
+      "page": 2,
+      "category": "repeated blank-form labels",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "Tax liability",
+        "Paid Preparer Use Only",
+        "Sign your name"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "Repeated fields, monthly labels and empty boxes do not invalidate the real row labels.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 2770,
+        "embeddedTextSha256": "48fa50fe4544a081458791d945f085dd36cb32ebe30db449b40180c473957107",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "Tax liability": true,
+          "Paid Preparer Use Only": true,
+          "Sign your name": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "1a388935f5cc15ebc55c2aa989b5f9a648ce0dc15fdeb4d51bbb3be03277a336",
+        "sourceSizePoints": [
+          611.976,
+          791.968
+        ]
+      }
+    },
+    {
+      "id": "heldout-nist-fips186-5-p7",
+      "sourceId": "nist-fips186-5",
+      "filename": "nist-fips186-5.pdf",
+      "sourceUrl": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf",
+      "rightsReference": "corpus.json#nist-fips186-5",
+      "bytes": 1844414,
+      "sha256": "fbb9c7c2ba442f03c57b63b43c888311903c9d0f29f89b06efdebd9b619140c5",
+      "page": 7,
+      "category": "dotted-leader table of contents",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "Table of Contents",
+        "RSA KEY PAIR GENERATION",
+        "ECDSA Signature Verification Algorithm"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "Long leader runs connect meaningful headings to page numbers.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 3940,
+        "embeddedTextSha256": "f0664d47befdcb8004c15c354c3ffdb9a39c3d0132424fa4e443f6acb313fcb1",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "Table of Contents": true,
+          "RSA KEY PAIR GENERATION": true,
+          "ECDSA Signature Verification Algorithm": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "3ca7a24a606a589bb32626a53e672d3b620cb0d02e874afe211d9fb8900df399",
+        "sourceSizePoints": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "id": "heldout-nist-sp800-38a-p6",
+      "sourceId": "nist-sp800-38a",
+      "filename": "nist-sp800-38a.pdf",
+      "sourceUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf",
+      "rightsReference": "corpus.json#nist-sp800-38a",
+      "bytes": 378266,
+      "sha256": "66821162de1e7130c5fb5eedb22140d8d6d013ec51af4550bb095c2a9481a00e",
+      "page": 6,
+      "category": "dotted-leader table of contents",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "Table of Contents",
+        "INITIALIZATION VECTORS",
+        "CBC-AES128.Encrypt"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "A second producer/older report with numerous leader dots and real labels.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 5918,
+        "embeddedTextSha256": "80d670108dad45a8f87968b39d15b83f80ba43e27b3a65a3266b96b35774b0b6",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "Table of Contents": true,
+          "INITIALIZATION VECTORS": true,
+          "CBC-AES128.Encrypt": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "60e50c3bd55786840cfd1aacd38f67143e88cc20b588b1cc2e46a3fbaadc4235",
+        "sourceSizePoints": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "id": "heldout-nist-fips180-4-p11",
+      "sourceId": "nist-fips180-4",
+      "filename": "nist-fips180-4.pdf",
+      "sourceUrl": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
+      "rightsReference": "corpus.json#nist-fips180-4",
+      "bytes": 833315,
+      "sha256": "0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82",
+      "page": 11,
+      "category": "brief legitimate selectable definition",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "right shift operation",
+        "w-bit word",
+        "integer"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "A short two-line definition near the top of a mostly empty page is the actual page content.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 137,
+        "embeddedTextSha256": "4e7012937b50b62f4d74b78882bfd3f12cd3daea717ef08eff87848be922595a",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "right shift operation": true,
+          "w-bit word": true,
+          "integer": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "bddc72a1e87a622fdf3f8b241090a4ffd8cd6975c86f69f3223b927aaeacaef9",
+        "sourceSizePoints": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "id": "heldout-nist-sp800-145-p1",
+      "sourceId": "nist-sp800-145",
+      "filename": "nist-sp800-145.pdf",
+      "sourceUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+      "rightsReference": "corpus.json#nist-sp800-145",
+      "bytes": 85781,
+      "sha256": "7b0c1a9fdfc67218b8ba2098f448c100c27070db91736b3c87fed63bfa21d418",
+      "page": 1,
+      "category": "short legitimate title page",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "The NIST Definition of Cloud Computing",
+        "Peter Mell",
+        "Timothy Grance"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "The title, authors and publication number are useful selectable cover content; decorative logo text is not required.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 176,
+        "embeddedTextSha256": "a4f230f63b5300511dceed9828212b207e5819824f243cc772d9db58cf0b0a37",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "The NIST Definition of Cloud Computing": true,
+          "Peter Mell": true,
+          "Timothy Grance": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "b4e030fac121a538c31381870e4d4a9dfae484bb169b94a7d2a5697168ba9583",
+        "sourceSizePoints": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "id": "heldout-nist-sp800-145-p5",
+      "sourceId": "nist-sp800-145",
+      "filename": "nist-sp800-145.pdf",
+      "sourceUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+      "rightsReference": "corpus.json#nist-sp800-145",
+      "bytes": 85781,
+      "sha256": "7b0c1a9fdfc67218b8ba2098f448c100c27070db91736b3c87fed63bfa21d418",
+      "page": 5,
+      "category": "ordinary prose control",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "Authority",
+        "Purpose and Scope",
+        "Audience"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "Normal report prose should remain embedded text.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 2119,
+        "embeddedTextSha256": "e6e9206b3635dc38ca90ad6340038351059826c0db1196af38745c08dcaade4f",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "Authority": true,
+          "Purpose and Scope": true,
+          "Audience": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "6803dbbe65bf06468df8afb63603ee333c24434aa36acc3ec50ee303950e9dca",
+        "sourceSizePoints": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "id": "heldout-nist-fips180-4-p36",
+      "sourceId": "nist-fips180-4",
+      "filename": "nist-fips180-4.pdf",
+      "sourceUrl": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
+      "rightsReference": "corpus.json#nist-fips180-4",
+      "bytes": 833315,
+      "sha256": "0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82",
+      "page": 36,
+      "category": "brief legitimate erratum table",
+      "expectedMethod": "PDF text",
+      "expectedTokens": [
+        "ERRATUM",
+        "5/9/2014",
+        "Editorial"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "The whole useful page is a short correction notice and one-row table.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 224,
+        "embeddedTextSha256": "48b976124fc8953d6d357dccb7637e38d7ea05683e5ec7301c2857ef886d0962",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "ERRATUM": true,
+          "5/9/2014": true,
+          "Editorial": true
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "bee2bbaa503f6d3538bb8a66ab0b552c7a8b96c0968d7a3b73bfad41907148bf",
+        "sourceSizePoints": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "id": "heldout-nist-fips31-archive-p60",
+      "sourceId": "nist-fips31-archive",
+      "filename": "nist-fips31-archive.pdf",
+      "sourceUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub31.pdf",
+      "rightsReference": "corpus.json#nist-fips31-archive",
+      "bytes": 7163308,
+      "sha256": "683b51795e3ddc0c07bf50a5a151bcbc09729fde1561bf2a8e6f6254764c6346",
+      "page": 60,
+      "category": "incomplete header/caption-only hidden OCR",
+      "expectedMethod": "OCR",
+      "expectedTokens": [
+        "ADP Manager",
+        "Personnel and Administration",
+        "Data Conversion"
+      ],
+      "minimumCharacters": 50,
+      "expectationReason": "Visible organization-chart node labels are absent from the61-character hidden header/caption layer. OCR is preferred to recover node text, though accuracy still requires review.",
+      "independentInspection": {
+        "extractor": "pypdf 6.10.0",
+        "embeddedTextCharacters": 61,
+        "embeddedTextSha256": "3b08228857af38ca29d9ecdfc95ad18e2de1c0b3719fe55a2818ab3d668a36de",
+        "expectedTokensPresentInEmbeddedLayer": {
+          "ADP Manager": false,
+          "Personnel and Administration": false,
+          "Data Conversion": false
+        },
+        "render": "Poppler pdftoppm at1300-pixel longest side; all nine pages visually reviewed",
+        "renderSha256": "6f54a6478613b5d9c4b97f401151a4584cdb9a8ee6db34a9824b83c8cc4007b8",
+        "sourceSizePoints": [
+          571.0,
+          766.0
+        ]
+      }
+    }
+  ]
+}

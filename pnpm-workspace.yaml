@@ -1,0 +1,9 @@
+allowBuilds:
+  esbuild: true
+  tesseract.js: false
+  workerd: true
+minimumReleaseAgeExclude:
+  - brace-expansion@1.1.17 || 5.0.8
+overrides:
+  # Miniflare pins 7.28.0; keep its current runtime while applying the 7.x security fixes.
+  'miniflare>undici': 7.29.0

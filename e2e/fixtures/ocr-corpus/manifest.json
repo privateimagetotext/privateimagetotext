@@ -1,0 +1,151 @@
+{
+  "version": 2,
+  "fixtures": [
+    {
+      "id": "clean-screenshot",
+      "image": "clean-screenshot.png",
+      "groundTruth": "clean-screenshot.txt",
+      "contentMode": "screenshot",
+      "enhancementPreset": "original",
+      "baselineEnhancementPreset": "original",
+      "categories": ["clean-screenshot"],
+      "criticalTokens": ["SCREEN-7429", "Ready"],
+      "fastSmoke": true
+    },
+    {
+      "id": "uneven-lighting",
+      "image": "uneven-lighting.png",
+      "groundTruth": "uneven-lighting.txt",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "baselineEnhancementPreset": "document",
+      "categories": ["printed-page", "uneven-lighting", "shadow", "adaptive-degraded"],
+      "criticalTokens": ["SHADOW-204", "browser-only"],
+      "fastSmoke": true
+    },
+    {
+      "id": "receipt",
+      "image": "receipt.png",
+      "groundTruth": "receipt.txt",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "baselineEnhancementPreset": "original",
+      "categories": ["receipt", "adaptive-degraded"],
+      "criticalTokens": ["000742", "$38.45", "CARD-3180"],
+      "fastSmoke": false
+    },
+    {
+      "id": "small-font",
+      "image": "small-font.png",
+      "groundTruth": "small-font.txt",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "baselineEnhancementPreset": "original",
+      "categories": ["small-font", "small-image", "adaptive-degraded"],
+      "criticalTokens": ["SMALL-991", "17px"],
+      "fastSmoke": false
+    },
+    {
+      "id": "skew-three-degrees",
+      "image": "skew-three-degrees.png",
+      "groundTruth": "skew-three-degrees.txt",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "baselineEnhancementPreset": "original",
+      "categories": ["skew-2-to-4-degrees", "adaptive-degraded"],
+      "criticalTokens": ["SKEW-303", "three-degree"],
+      "fastSmoke": false
+    },
+    {
+      "id": "punctuation-ambiguous",
+      "image": "punctuation-ambiguous.png",
+      "groundTruth": "punctuation-ambiguous.txt",
+      "contentMode": "screenshot",
+      "enhancementPreset": "original",
+      "baselineEnhancementPreset": "original",
+      "categories": ["punctuation-numbers", "ambiguous-characters"],
+      "criticalTokens": ["O/0", "I/l/1", "O0I1l-507", "$1,024.50"],
+      "fastSmoke": false
+    },
+    {
+      "id": "code-terminal",
+      "image": "code-terminal.png",
+      "groundTruth": "code-terminal.txt",
+      "contentMode": "code",
+      "enhancementPreset": "original",
+      "baselineEnhancementPreset": "original",
+      "categories": ["code-terminal"],
+      "criticalTokens": ["ERR-4097", "worker.ts:42", "retryCount"],
+      "fastSmoke": false
+    },
+    {
+      "id": "dark-background",
+      "image": "dark-background.png",
+      "groundTruth": "dark-background.txt",
+      "contentMode": "screenshot",
+      "enhancementPreset": "adaptive-document",
+      "baselineEnhancementPreset": "inverted",
+      "categories": ["dark-background", "adaptive-degraded"],
+      "criticalTokens": ["DARK-808", "LOCAL"],
+      "fastSmoke": false
+    },
+    {
+      "id": "two-column-document",
+      "image": "two-column-document.png",
+      "groundTruth": "two-column-document.txt",
+      "contentMode": "columns",
+      "baselineContentMode": "document",
+      "enhancementPreset": "original",
+      "baselineEnhancementPreset": "original",
+      "categories": ["two-column-document"],
+      "criticalTokens": ["COLUMN-A12", "COLUMN-B34"],
+      "fastSmoke": false
+    },
+    {
+      "id": "two-column-no-divider",
+      "image": "two-column-no-divider.png",
+      "groundTruth": "two-column-no-divider.txt",
+      "contentMode": "columns",
+      "baselineContentMode": "document",
+      "enhancementPreset": "original",
+      "baselineEnhancementPreset": "original",
+      "categories": ["two-column-document", "layout-no-divider"],
+      "criticalTokens": ["LAYOUT-L17", "LAYOUT-R83"],
+      "fastSmoke": false
+    },
+    {
+      "id": "two-column-spanning-heading",
+      "image": "two-column-spanning-heading.png",
+      "groundTruth": "two-column-spanning-heading.txt",
+      "contentMode": "columns",
+      "baselineContentMode": "document",
+      "enhancementPreset": "original",
+      "baselineEnhancementPreset": "original",
+      "categories": ["two-column-document", "layout-spanning-heading"],
+      "criticalTokens": ["LAYOUT-H55", "LAYOUT-L21", "LAYOUT-R89"],
+      "fastSmoke": false
+    },
+    {
+      "id": "long-receipt",
+      "image": "long-receipt.png",
+      "groundTruth": "long-receipt.txt",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "baselineEnhancementPreset": "adaptive-document",
+      "categories": ["long-document", "long-receipt", "native-tiling"],
+      "criticalTokens": ["TOP-1001", "MID-5050", "$184.32", "BOTTOM-9009"],
+      "fastSmoke": false
+    },
+    {
+      "id": "long-printed-page",
+      "image": "long-printed-page.png",
+      "groundTruth": "long-printed-page.txt",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "baselineEnhancementPreset": "adaptive-document",
+      "categories": ["long-document", "printed-page", "native-tiling"],
+      "criticalTokens": ["PAGE-7001", "MIDDLE-4404", "END-9909"],
+      "fastSmoke": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-06",
+  "scope": "One independently justified candidate for native isolated-page failure and later-page extraction; no browser outcome asserted.",
+  "fixtures": [
+    {
+      "id": "deferred-flate-page-error",
+      "category": "native-page-failure-continuation",
+      "availability": "available",
+      "file": "tmp/pdf-native-page-failure-20260906/deferred-flate-page-error.pdf",
+      "bytes": 1137,
+      "sha256": "898bd793902612d8ac1eef93a2f0bbbeba70729e407a6fb3ee1ef785c4cd7e33",
+      "expected": {
+        "outcomes": [
+          "page failed and processing continued"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1,
+          2
+        ],
+        "pageCount": 2,
+        "requiredText": [
+          {
+            "page": 2,
+            "text": "SECOND PAGE REMAINS READABLE 86420"
+          },
+          {
+            "page": 2,
+            "text": "This separate page has a complete, valid text stream."
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [
+          1
+        ],
+        "safeErrorCodes": [
+          "PDF_PAGE_TEXT_EXTRACTION_FAILED"
+        ],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Two valid independent Page dictionaries and exact ordinary xref offsets; page1 Contents array refers to a7-byte Flate stream; page2 has a separate valid uncompressed content stream.",
+        "Flate bytes789c0700000001 have valid CMF/FLG, no preset dictionary, and reserved DEFLATE BTYPE3 after the header; independent zlib rejects invalid block type.",
+        "Pinned PDF.js6.2.108 FlateStream constructor accepts this header; reserved block failure occurs during deferred decompression/readBlock outside makeFilter's constructor-to-NullStream recovery.",
+        "pypdf strict reader sees both pages and extracts the required page2 text; Poppler pdfinfo sees2pages without syntax warnings."
+      ],
+      "notes": [
+        "Synthetic harmless public sentinel only. No active content, attachments, external reference, encryption, cyclic tree, oversized page or compression pressure.",
+        "Native proof must use real PDF.js and the existing app with stopAtErrors=true, show page1 fixed safe error, page2 full sentinel text, and cleanup. No parse-result injection or expectation rewriting.",
+        "Original corrupt-header and malformed-hybrid fixtures/contracts remain unchanged. This is a different source-justified deferred-decompression failure."
+      ]
+    }
+  ],
+  "untestedCategories": []
+}

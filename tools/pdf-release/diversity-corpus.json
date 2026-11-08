@@ -1,0 +1,109 @@
+{
+  "cases": [
+    {
+      "id": "w3c-inline-bidi",
+      "kind": "derived-real-source",
+      "filename": "w3c-inline-bidi.pdf",
+      "pdfPath": "tmp/pdf-diversity-20260906/browser-print/w3c-inline-bidi.pdf",
+      "bytes": 369734,
+      "sha256": "c08cbfe973320535fa617f5275e41d265e50ce0659e06262bc3df28833897be7",
+      "pages": [
+        {
+          "number": 2,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "QUICK ANSWER",
+            "The title is",
+            "مدخل إلى",
+            "C++",
+            "פעילות הבינאום",
+            "5 times on the page"
+          ],
+          "minimumCharacters": 70
+        },
+        {
+          "number": 7,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Adding a dir attribute",
+            "שם מוצר",
+            "הספר הבא לקריאה",
+            "Discover!",
+            "Who were the Elamites?"
+          ],
+          "minimumCharacters": 70
+        }
+      ]
+    },
+    {
+      "id": "w3c-vertical",
+      "kind": "derived-real-source",
+      "filename": "w3c-vertical.pdf",
+      "pdfPath": "tmp/pdf-diversity-20260906/browser-print/w3c-vertical.pdf",
+      "bytes": 891529,
+      "sha256": "99a0d96ce74e3416ec2a6ba94ed8615488bd545aba2850efb895332ea4207077",
+      "pages": [
+        {
+          "number": 6,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "国際化活動",
+            "W3C",
+            "ワールド・ワイド・ウェッブを世界中に広げましょう。",
+            "Mongolian",
+            "Mongolian lines run left to right.",
+            "writing-mode: vertical-lr"
+          ],
+          "minimumCharacters": 70
+        },
+        {
+          "number": 8,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Embedded RTL text",
+            "国际化活动",
+            "نشاط التدويل",
+            "万维网联盟",
+            "Fig. 3.",
+            "Arabic text embedded in vertical Chinese"
+          ],
+          "minimumCharacters": 70
+        },
+        {
+          "number": 22,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "2015年5月22日",
+            "今日は2015年5月22日です。",
+            "2015-05-22",
+            "text-combine-upright: digits 2;"
+          ],
+          "minimumCharacters": 70
+        }
+      ]
+    },
+    {
+      "id": "cord-train-9-receipt",
+      "kind": "derived-real-source",
+      "filename": "cord-train-9-receipt.pdf",
+      "pdfPath": "tmp/pdf-diversity-20260906/receipt/cord-train-9-receipt.pdf",
+      "bytes": 154214,
+      "sha256": "caee9e603e1c6ec34680055af4aa39e5d87f6472d5af15ece366fc1bcc2e86d9",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "OCR",
+          "expectedTokens": [
+            "THAI ICED TEA",
+            "2",
+            "@20.000",
+            "40.000",
+            "100.000",
+            "60.000"
+          ],
+          "minimumCharacters": 70
+        }
+      ]
+    }
+  ]
+}

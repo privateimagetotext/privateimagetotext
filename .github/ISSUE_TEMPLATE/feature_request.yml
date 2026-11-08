@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an improvement or a new capability.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every feature must keep files and results in the browser, add no new network destination or stored user content, and work under the site's Content Security Policy. See the privacy invariants in CONTRIBUTING.md.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task or problem, not only the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What do you use today?
+      description: Other tools or workarounds you have tried, if any.

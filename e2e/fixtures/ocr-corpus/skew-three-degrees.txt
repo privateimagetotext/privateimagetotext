@@ -1,0 +1,4 @@
+SKEWED DOCUMENT
+This synthetic page is rotated by a three-degree angle.
+Reference: SKEW-303
+Fine deskew should improve reading without changing the words.

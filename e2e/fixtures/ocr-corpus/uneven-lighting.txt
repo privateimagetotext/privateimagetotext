@@ -1,0 +1,6 @@
+FIELD NOTES
+Uneven lighting can hide fine print.
+This browser-only test uses synthetic words.
+Reference: SHADOW-204
+The browser keeps this scan local.
+Review every recognised line.

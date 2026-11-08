@@ -1,0 +1,27 @@
+Private Image to Text: guide content and brand
+
+Copyright (c) 2026 Simon. All rights reserved.
+
+The software licence for this repository does not apply to the following
+"Guide Content", which is not open source:
+
+  - src/config/guide-content/   (guide text and structure)
+  - src/config/pdf-guide.ts      (PDF guide text and structure)
+  - public/guides/               (guide figures)
+
+You may read the Guide Content here and on https://privateimagetotext.com,
+link to it, and quote short extracts with attribution and a link to the
+original page. You may not republish, copy, adapt or redistribute the Guide
+Content, in whole or in substantial part, without written permission from the
+copyright holder (contact@privateimagetotext.com).
+
+If you publish your own build of the software, remove or replace the Guide
+Content first.
+
+Third-party material inside these paths keeps its own licence. See
+public/guides/NOTICE.txt and public/guides/README.ijg for the figure sources
+and notices.
+
+The name "Private Image to Text", the privateimagetotext.com domain and the
+site's logo and icons are not licensed under any licence in this repository.
+Do not use them to identify a modified or redistributed version.

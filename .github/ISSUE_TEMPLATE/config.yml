@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://privateimagetotext.com/privacy/technical
+    about: Please report security issues privately by email (see SECURITY.md and the contact on this page), not in a public issue.

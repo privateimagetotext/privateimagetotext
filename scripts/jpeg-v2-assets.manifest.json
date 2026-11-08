@@ -1,0 +1,86 @@
+{
+  "libjpegTurbo": {
+    "version": "3.1.4.1",
+    "sourceUrl": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-3.1.4.1.tar.gz",
+    "archive": "native/jpeg-v2/vendor/libjpeg-turbo-3.1.4.1.tar.gz",
+    "archiveBytes": 2528617,
+    "archiveSha256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+    "license": {
+      "path": "native/jpeg-v2/vendor/LICENSE.md",
+      "bytes": 5624,
+      "sha256": "a41fe75dcd7c8e5a4964c043c3e4216a644999dd136a846583ed0d61a0b14be4"
+    }
+  },
+  "toolchain": {
+    "emscripten": "6.0.4",
+    "image": "emscripten/emsdk@sha256:3a0d11e50f072dc2c4bc92e3b05ab1340fb7d4dd152f80b8af35fc1c6f15e644",
+    "sourceDateEpoch": 1785628800
+  },
+  "build": {
+    "hostCommand": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-jpeg-v2-codec.ps1",
+    "containerCommand": "sh /src/native/jpeg-v2/build-in-container.sh",
+    "cmakeFlags": [
+      "CMAKE_BUILD_TYPE=Release",
+      "ENABLE_SHARED=OFF",
+      "ENABLE_STATIC=ON",
+      "WITH_ARITH_DEC=OFF",
+      "WITH_ARITH_ENC=OFF",
+      "WITH_JAVA=OFF",
+      "WITH_SIMD=OFF",
+      "WITH_TESTS=OFF",
+      "WITH_TOOLS=OFF",
+      "WITH_TURBOJPEG=OFF"
+    ],
+    "compilerFlags": ["-O3", "-DNDEBUG", "-Wall", "-Wextra", "-Werror"],
+    "linkerFlags": [
+      "MODULARIZE=1",
+      "EXPORT_ES6=1",
+      "ENVIRONMENT=worker",
+      "ALLOW_MEMORY_GROWTH=1",
+      "INITIAL_MEMORY=16777216",
+      "MAXIMUM_MEMORY=268435456",
+      "ABORTING_MALLOC=0",
+      "FILESYSTEM=0",
+      "SUPPORT_LONGJMP=emscripten",
+      "MALLOC=emmalloc",
+      "ASSERTIONS=0",
+      "STACK_SIZE=524288"
+    ],
+    "exportedFunctions": [
+      "_malloc",
+      "_free",
+      "_jpegv2_analyze",
+      "_jpegv2_encode",
+      "_jpegv2_inspect",
+      "_jpegv2_reset",
+      "_jpegv2_output_ptr",
+      "_jpegv2_output_length",
+      "_jpegv2_header_ptr",
+      "_jpegv2_payload_ptr",
+      "_jpegv2_payload_length",
+      "_jpegv2_info_value"
+    ]
+  },
+  "wrapper": {
+    "path": "native/jpeg-v2/wrapper/jpeg_v2_codec.c",
+    "bytes": 53663,
+    "sha256": "ec57e79064f7ea99b02fc5db5de499d4929d78b68b5cc4ac0df18e0bc0758645"
+  },
+  "assets": [
+    {
+      "path": "src/features/steganography/jpeg-v2/generated/jpeg-v2-codec.mjs",
+      "bytes": 11138,
+      "sha256": "9f1287fdb4486237ea2c0d2927cc505b848a0bd4507e165a6bead1861a80ad4a"
+    },
+    {
+      "path": "public/steg/jpeg-v2-codec.wasm",
+      "bytes": 253687,
+      "sha256": "1c8326b7278e5f0afa003a9bf95ffe280f2e733160d1458f0be54f9cb9c1968a"
+    },
+    {
+      "path": "public/steg/libjpeg-turbo-LICENSE.md",
+      "bytes": 5624,
+      "sha256": "a41fe75dcd7c8e5a4964c043c3e4216a644999dd136a846583ed0d61a0b14be4"
+    }
+  ]
+}

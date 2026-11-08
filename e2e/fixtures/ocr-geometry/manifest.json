@@ -1,0 +1,1663 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "scripts/generate-ocr-geometry-corpus.mjs",
+  "syntheticContentOnly": true,
+  "calibrationHistory": [
+    {
+      "revision": 2,
+      "reason": "The first untouched-production baseline showed exact-token OCR ambiguity for 0/O, 1/l and REPEAT88 plus a non-spatial secondary-anchor order. Ambiguous critical strings and declared array order were revised; positions, transforms, rendering sizes, crop edges, tile seam geometry and metric tolerances were not changed. The baseline is rerun after this revision."
+    }
+  ],
+  "coordinateSpaces": [
+    "source-image",
+    "oriented-page",
+    "prepared-section",
+    "engine-section"
+  ],
+  "fixtures": [
+    {
+      "id": "manual-rotation-0",
+      "image": "manual-rotation-0.png",
+      "sourceSize": {
+        "width": 1501,
+        "height": 901
+      },
+      "anchors": [
+        {
+          "id": "manual-rotation-0-anchor-1",
+          "expectedToken": "AMBERCAT",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 88,
+              "y": 109
+            },
+            {
+              "x": 365.59991455078125,
+              "y": 109
+            },
+            {
+              "x": 365.59991455078125,
+              "y": 151
+            },
+            {
+              "x": 88,
+              "y": 151
+            }
+          ],
+          "envelope": {
+            "x": 88,
+            "y": 109,
+            "width": 277.59991455078125,
+            "height": 42
+          }
+        },
+        {
+          "id": "manual-rotation-0-anchor-2",
+          "expectedToken": "AMBERDOG",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 760,
+              "y": 404
+            },
+            {
+              "x": 1035.5999145507812,
+              "y": 404
+            },
+            {
+              "x": 1035.5999145507812,
+              "y": 446
+            },
+            {
+              "x": 760,
+              "y": 446
+            }
+          ],
+          "envelope": {
+            "x": 760,
+            "y": 404,
+            "width": 275.59991455078125,
+            "height": 42
+          }
+        },
+        {
+          "id": "manual-rotation-0-anchor-3",
+          "expectedToken": "AMBERFOX",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 170,
+              "y": 729
+            },
+            {
+              "x": 448.59991455078125,
+              "y": 729
+            },
+            {
+              "x": 448.59991455078125,
+              "y": 771
+            },
+            {
+              "x": 170,
+              "y": 771
+            }
+          ],
+          "envelope": {
+            "x": 170,
+            "y": 729,
+            "width": 278.59991455078125,
+            "height": 42
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 1501,
+          "height": 901
+        }
+      },
+      "manualRotation": 0,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "manual-rotation",
+        "rotation-0",
+        "landscape-source"
+      ],
+      "fastSmoke": false,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 58,
+        "renderTransform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "imageSha256": "6350629566fca2ffbd2d1456910c33b7da6294768688bcace8e018f2e8058b48"
+    },
+    {
+      "id": "manual-rotation-90",
+      "image": "manual-rotation-90.png",
+      "sourceSize": {
+        "width": 901,
+        "height": 1501
+      },
+      "anchors": [
+        {
+          "id": "manual-rotation-90-anchor-1",
+          "expectedToken": "BRONZECAT",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 109,
+              "y": 1409
+            },
+            {
+              "x": 109,
+              "y": 1100.60009765625
+            },
+            {
+              "x": 151,
+              "y": 1100.60009765625
+            },
+            {
+              "x": 151,
+              "y": 1409
+            }
+          ],
+          "envelope": {
+            "x": 109,
+            "y": 1100.60009765625,
+            "width": 42,
+            "height": 308.39990234375
+          }
+        },
+        {
+          "id": "manual-rotation-90-anchor-2",
+          "expectedToken": "BRONZEDOG",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 404,
+              "y": 737
+            },
+            {
+              "x": 404,
+              "y": 430.60009765625
+            },
+            {
+              "x": 446,
+              "y": 430.60009765625
+            },
+            {
+              "x": 446,
+              "y": 737
+            }
+          ],
+          "envelope": {
+            "x": 404,
+            "y": 430.60009765625,
+            "width": 42,
+            "height": 306.39990234375
+          }
+        },
+        {
+          "id": "manual-rotation-90-anchor-3",
+          "expectedToken": "BRONZEFOX",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 729,
+              "y": 1327
+            },
+            {
+              "x": 729,
+              "y": 1017.60009765625
+            },
+            {
+              "x": 771,
+              "y": 1017.60009765625
+            },
+            {
+              "x": 771,
+              "y": 1327
+            }
+          ],
+          "envelope": {
+            "x": 729,
+            "y": 1017.60009765625,
+            "width": 42,
+            "height": 309.39990234375
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 901,
+          "height": 1501
+        }
+      },
+      "manualRotation": 90,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "manual-rotation",
+        "rotation-90",
+        "portrait-source"
+      ],
+      "fastSmoke": true,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 58,
+        "renderTransform": [
+          0,
+          -1,
+          1,
+          0,
+          0,
+          1501
+        ]
+      },
+      "imageSha256": "5c9361b362af3096d56bf6e896718c6f6402739844e993863963429cf5dfd907"
+    },
+    {
+      "id": "manual-rotation-180",
+      "image": "manual-rotation-180.png",
+      "sourceSize": {
+        "width": 1501,
+        "height": 901
+      },
+      "anchors": [
+        {
+          "id": "manual-rotation-180-anchor-1",
+          "expectedToken": "COPPERCAT",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 1411,
+              "y": 792
+            },
+            {
+              "x": 1100.60009765625,
+              "y": 792
+            },
+            {
+              "x": 1100.60009765625,
+              "y": 750
+            },
+            {
+              "x": 1411,
+              "y": 750
+            }
+          ],
+          "envelope": {
+            "x": 1100.60009765625,
+            "y": 750,
+            "width": 310.39990234375,
+            "height": 42
+          }
+        },
+        {
+          "id": "manual-rotation-180-anchor-2",
+          "expectedToken": "COPPERDOG",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 739,
+              "y": 497
+            },
+            {
+              "x": 430.60009765625,
+              "y": 497
+            },
+            {
+              "x": 430.60009765625,
+              "y": 455
+            },
+            {
+              "x": 739,
+              "y": 455
+            }
+          ],
+          "envelope": {
+            "x": 430.60009765625,
+            "y": 455,
+            "width": 308.39990234375,
+            "height": 42
+          }
+        },
+        {
+          "id": "manual-rotation-180-anchor-3",
+          "expectedToken": "COPPERFOX",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 1329,
+              "y": 172
+            },
+            {
+              "x": 1017.60009765625,
+              "y": 172
+            },
+            {
+              "x": 1017.60009765625,
+              "y": 130
+            },
+            {
+              "x": 1329,
+              "y": 130
+            }
+          ],
+          "envelope": {
+            "x": 1017.60009765625,
+            "y": 130,
+            "width": 311.39990234375,
+            "height": 42
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 1501,
+          "height": 901
+        }
+      },
+      "manualRotation": 180,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "manual-rotation",
+        "rotation-180",
+        "landscape-source"
+      ],
+      "fastSmoke": false,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 58,
+        "renderTransform": [
+          -1,
+          0,
+          0,
+          -1,
+          1501,
+          901
+        ]
+      },
+      "imageSha256": "5b6dc1864b3e1bc4ffa39c93d3e3a5adfa7898e8629ce1672b3da6e36ad1f493"
+    },
+    {
+      "id": "manual-rotation-270",
+      "image": "manual-rotation-270.png",
+      "sourceSize": {
+        "width": 901,
+        "height": 1501
+      },
+      "anchors": [
+        {
+          "id": "manual-rotation-270-anchor-1",
+          "expectedToken": "DENIMCAT",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 792,
+              "y": 91
+            },
+            {
+              "x": 792,
+              "y": 365.59991455078125
+            },
+            {
+              "x": 750,
+              "y": 365.59991455078125
+            },
+            {
+              "x": 750,
+              "y": 91
+            }
+          ],
+          "envelope": {
+            "x": 750,
+            "y": 91,
+            "width": 42,
+            "height": 274.59991455078125
+          }
+        },
+        {
+          "id": "manual-rotation-270-anchor-2",
+          "expectedToken": "DENIMDOG",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 497,
+              "y": 763
+            },
+            {
+              "x": 497,
+              "y": 1035.5999145507812
+            },
+            {
+              "x": 455,
+              "y": 1035.5999145507812
+            },
+            {
+              "x": 455,
+              "y": 763
+            }
+          ],
+          "envelope": {
+            "x": 455,
+            "y": 763,
+            "width": 42,
+            "height": 272.59991455078125
+          }
+        },
+        {
+          "id": "manual-rotation-270-anchor-3",
+          "expectedToken": "DENIMFOX",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 172,
+              "y": 173
+            },
+            {
+              "x": 172,
+              "y": 448.59991455078125
+            },
+            {
+              "x": 130,
+              "y": 448.59991455078125
+            },
+            {
+              "x": 130,
+              "y": 173
+            }
+          ],
+          "envelope": {
+            "x": 130,
+            "y": 173,
+            "width": 42,
+            "height": 275.59991455078125
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 901,
+          "height": 1501
+        }
+      },
+      "manualRotation": 270,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "manual-rotation",
+        "rotation-270",
+        "portrait-source"
+      ],
+      "fastSmoke": false,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 58,
+        "renderTransform": [
+          0,
+          1,
+          -1,
+          0,
+          901,
+          0
+        ]
+      },
+      "imageSha256": "5a072ff02d9226ff13f091b5a5cfba88cc19a2fd3c90ea92f22a6abceb64d67e"
+    },
+    {
+      "id": "corner-and-centre-anchors",
+      "image": "corner-and-centre-anchors.png",
+      "sourceSize": {
+        "width": 1801,
+        "height": 1201
+      },
+      "anchors": [
+        {
+          "id": "corner-and-centre-anchors-anchor-1",
+          "expectedToken": "TOPLEFT1",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 43,
+              "y": 54
+            },
+            {
+              "x": 300.7999572753906,
+              "y": 54
+            },
+            {
+              "x": 300.7999572753906,
+              "y": 93
+            },
+            {
+              "x": 43,
+              "y": 93
+            }
+          ],
+          "envelope": {
+            "x": 43,
+            "y": 54,
+            "width": 257.7999572753906,
+            "height": 39
+          }
+        },
+        {
+          "id": "corner-and-centre-anchors-anchor-2",
+          "expectedToken": "TOPRIGHT2",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 1471.800048828125,
+              "y": 54
+            },
+            {
+              "x": 1760,
+              "y": 54
+            },
+            {
+              "x": 1760,
+              "y": 93
+            },
+            {
+              "x": 1471.800048828125,
+              "y": 93
+            }
+          ],
+          "envelope": {
+            "x": 1471.800048828125,
+            "y": 54,
+            "width": 288.199951171875,
+            "height": 39
+          }
+        },
+        {
+          "id": "corner-and-centre-anchors-anchor-3",
+          "expectedToken": "CENTER55",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 774.6000213623047,
+              "y": 587
+            },
+            {
+              "x": 1030.3999786376953,
+              "y": 587
+            },
+            {
+              "x": 1030.3999786376953,
+              "y": 626
+            },
+            {
+              "x": 774.6000213623047,
+              "y": 626
+            }
+          ],
+          "envelope": {
+            "x": 774.6000213623047,
+            "y": 587,
+            "width": 255.79995727539062,
+            "height": 39
+          }
+        },
+        {
+          "id": "corner-and-centre-anchors-anchor-4",
+          "expectedToken": "BOTLEFT3",
+          "critical": true,
+          "readingOrder": 3,
+          "polygon": [
+            {
+              "x": 46,
+              "y": 1122
+            },
+            {
+              "x": 298.7999572753906,
+              "y": 1122
+            },
+            {
+              "x": 298.7999572753906,
+              "y": 1161
+            },
+            {
+              "x": 46,
+              "y": 1161
+            }
+          ],
+          "envelope": {
+            "x": 46,
+            "y": 1122,
+            "width": 252.79995727539062,
+            "height": 39
+          }
+        },
+        {
+          "id": "corner-and-centre-anchors-anchor-5",
+          "expectedToken": "BOTRIGHT4",
+          "critical": true,
+          "readingOrder": 4,
+          "polygon": [
+            {
+              "x": 1475.800048828125,
+              "y": 1122
+            },
+            {
+              "x": 1763,
+              "y": 1122
+            },
+            {
+              "x": 1763,
+              "y": 1161
+            },
+            {
+              "x": 1475.800048828125,
+              "y": 1161
+            }
+          ],
+          "envelope": {
+            "x": 1475.800048828125,
+            "y": 1122,
+            "width": 287.199951171875,
+            "height": 39
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 1801,
+          "height": 1201
+        }
+      },
+      "manualRotation": 0,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "corner-anchors",
+        "centre-anchor",
+        "landscape-source"
+      ],
+      "fastSmoke": true,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 54,
+        "renderTransform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "imageSha256": "feb089a04c8401ba0664703d25a20ca90a4d329e7e256fbc2263f767dd463f10"
+    },
+    {
+      "id": "odd-crop-rounded-preview",
+      "image": "odd-crop-rounded-preview.png",
+      "sourceSize": {
+        "width": 5201,
+        "height": 3503
+      },
+      "anchors": [
+        {
+          "id": "odd-crop-rounded-preview-anchor-1",
+          "expectedToken": "CROPUP11",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 391,
+              "y": 496
+            },
+            {
+              "x": 826.3999633789062,
+              "y": 496
+            },
+            {
+              "x": 826.3999633789062,
+              "y": 562
+            },
+            {
+              "x": 391,
+              "y": 562
+            }
+          ],
+          "envelope": {
+            "x": 391,
+            "y": 496,
+            "width": 435.39996337890625,
+            "height": 66
+          }
+        },
+        {
+          "id": "odd-crop-rounded-preview-anchor-2",
+          "expectedToken": "CROPMID2",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 2374.800018310547,
+              "y": 1676
+            },
+            {
+              "x": 2808.199981689453,
+              "y": 1676
+            },
+            {
+              "x": 2808.199981689453,
+              "y": 1742
+            },
+            {
+              "x": 2374.800018310547,
+              "y": 1742
+            }
+          ],
+          "envelope": {
+            "x": 2374.800018310547,
+            "y": 1676,
+            "width": 433.39996337890625,
+            "height": 66
+          }
+        },
+        {
+          "id": "odd-crop-rounded-preview-anchor-3",
+          "expectedToken": "CROPDN33",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 3791,
+              "y": 2906
+            },
+            {
+              "x": 4224.399963378906,
+              "y": 2906
+            },
+            {
+              "x": 4224.399963378906,
+              "y": 2972
+            },
+            {
+              "x": 3791,
+              "y": 2972
+            }
+          ],
+          "envelope": {
+            "x": 3791,
+            "y": 2906,
+            "width": 433.39996337890625,
+            "height": 66
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "document",
+      "crop": {
+        "normalised": {
+          "x": 0.02634108825225918,
+          "y": 0.06023408506994005,
+          "width": 0.9423187848490675,
+          "height": 0.8572652012560662
+        },
+        "sourcePixelEdges": {
+          "x": 137,
+          "y": 211,
+          "width": 4901,
+          "height": 3003
+        }
+      },
+      "manualRotation": 0,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "odd-dimensions",
+        "non-full-crop",
+        "large-preview-reduction",
+        "unequal-prepared-scale",
+        "landscape-source"
+      ],
+      "fastSmoke": false,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 92,
+        "renderTransform": [
+          1,
+          0,
+          0,
+          1,
+          137,
+          211
+        ]
+      },
+      "imageSha256": "a87cc68c7f97cf6d83f9b067d947beaa69bce19e2aaf18e3e6067891fd52966e"
+    },
+    {
+      "id": "adaptive-enlargement",
+      "image": "adaptive-enlargement.png",
+      "sourceSize": {
+        "width": 701,
+        "height": 503
+      },
+      "anchors": [
+        {
+          "id": "adaptive-enlargement-anchor-1",
+          "expectedToken": "SMALLA11",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 42,
+              "y": 68
+            },
+            {
+              "x": 191.19993591308594,
+              "y": 68
+            },
+            {
+              "x": 191.19993591308594,
+              "y": 90
+            },
+            {
+              "x": 42,
+              "y": 90
+            }
+          ],
+          "envelope": {
+            "x": 42,
+            "y": 68,
+            "width": 149.19993591308594,
+            "height": 22
+          }
+        },
+        {
+          "id": "adaptive-enlargement-anchor-2",
+          "expectedToken": "CODE-42",
+          "critical": false,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 391,
+              "y": 68
+            },
+            {
+              "x": 519.5999450683594,
+              "y": 68
+            },
+            {
+              "x": 519.5999450683594,
+              "y": 90
+            },
+            {
+              "x": 391,
+              "y": 90
+            }
+          ],
+          "envelope": {
+            "x": 391,
+            "y": 68,
+            "width": 128.59994506835938,
+            "height": 22
+          }
+        },
+        {
+          "id": "adaptive-enlargement-anchor-3",
+          "expectedToken": "SMALLB22",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 250,
+              "y": 223
+            },
+            {
+              "x": 398.19993591308594,
+              "y": 223
+            },
+            {
+              "x": 398.19993591308594,
+              "y": 245
+            },
+            {
+              "x": 250,
+              "y": 245
+            }
+          ],
+          "envelope": {
+            "x": 250,
+            "y": 223,
+            "width": 148.19993591308594,
+            "height": 22
+          }
+        },
+        {
+          "id": "adaptive-enlargement-anchor-4",
+          "expectedToken": "SMALLC33",
+          "critical": true,
+          "readingOrder": 3,
+          "polygon": [
+            {
+              "x": 80,
+              "y": 398
+            },
+            {
+              "x": 228.19993591308594,
+              "y": 398
+            },
+            {
+              "x": 228.19993591308594,
+              "y": 420
+            },
+            {
+              "x": 80,
+              "y": 420
+            }
+          ],
+          "envelope": {
+            "x": 80,
+            "y": 398,
+            "width": 148.19993591308594,
+            "height": 22
+          }
+        },
+        {
+          "id": "adaptive-enlargement-anchor-5",
+          "expectedToken": "RATE:100",
+          "critical": false,
+          "readingOrder": 4,
+          "polygon": [
+            {
+              "x": 382,
+              "y": 398
+            },
+            {
+              "x": 528.1999359130859,
+              "y": 398
+            },
+            {
+              "x": 528.1999359130859,
+              "y": 421
+            },
+            {
+              "x": 382,
+              "y": 421
+            }
+          ],
+          "envelope": {
+            "x": 382,
+            "y": 398,
+            "width": 146.19993591308594,
+            "height": 23
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 701,
+          "height": 503
+        }
+      },
+      "manualRotation": 0,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "adaptive-enlargement",
+        "small-image",
+        "landscape-source"
+      ],
+      "fastSmoke": true,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 31,
+        "renderTransform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "imageSha256": "a5a6141fbce946ab4e9d2a10a54444248a0bf949411299711e5a159dcb79d3c7"
+    },
+    {
+      "id": "positive-fine-skew",
+      "image": "positive-fine-skew.png",
+      "sourceSize": {
+        "width": 1701,
+        "height": 1103
+      },
+      "anchors": [
+        {
+          "id": "positive-fine-skew-anchor-1",
+          "expectedToken": "FALCONAA",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 192.32882518930955,
+              "y": 184.05040529575265
+            },
+            {
+              "x": 466.552410100802,
+              "y": 198.42185440799847
+            },
+            {
+              "x": 464.35429993859833,
+              "y": 240.36429486769055
+            },
+            {
+              "x": 190.1307150271059,
+              "y": 225.99284575544476
+            }
+          ],
+          "envelope": {
+            "x": 190.1307150271059,
+            "y": 184.05040529575265,
+            "width": 276.42169507369607,
+            "height": 56.31388957193789
+          }
+        },
+        {
+          "id": "positive-fine-skew-anchor-2",
+          "expectedToken": "BADGERBB",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 766.6045031652692,
+              "y": 499.53803688414314
+            },
+            {
+              "x": 1038.8308290072523,
+              "y": 513.804814083903
+            },
+            {
+              "x": 1036.6327188450487,
+              "y": 555.747254543595
+            },
+            {
+              "x": 764.4063930030655,
+              "y": 541.4804773438351
+            }
+          ],
+          "envelope": {
+            "x": 764.4063930030655,
+            "y": 499.53803688414314,
+            "width": 274.42443600418676,
+            "height": 56.20921765945184
+          }
+        },
+        {
+          "id": "positive-fine-skew-anchor-3",
+          "expectedToken": "VECTORCC",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 287.277932385049,
+              "y": 779.836161287562
+            },
+            {
+              "x": 563.4987763660506,
+              "y": 794.3122823122937
+            },
+            {
+              "x": 561.300666203847,
+              "y": 836.2547227719859
+            },
+            {
+              "x": 285.07982222284534,
+              "y": 821.7786017472542
+            }
+          ],
+          "envelope": {
+            "x": 285.07982222284534,
+            "y": 779.836161287562,
+            "width": 278.41895414320527,
+            "height": 56.41856148442389
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 1701,
+          "height": 1103
+        }
+      },
+      "manualRotation": 0,
+      "fineSkewDegrees": 3,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "fine-skew",
+        "positive-skew",
+        "landscape-source"
+      ],
+      "fastSmoke": true,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 58,
+        "renderTransform": [
+          0.9986295347545738,
+          0.05233595624294383,
+          -0.05233595624294383,
+          0.9986295347545738,
+          30.0288605592184,
+          -43.755919201771235
+        ]
+      },
+      "imageSha256": "c9964cdbaa568b46a84eb79eb342825161d56072b975d0ee1c399cf6cb9a09cb"
+    },
+    {
+      "id": "negative-fine-skew",
+      "image": "negative-fine-skew.png",
+      "sourceSize": {
+        "width": 1703,
+        "height": 1101
+      },
+      "anchors": [
+        {
+          "id": "negative-fine-skew-anchor-1",
+          "expectedToken": "JAGUARAA",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 155.58186163973127,
+              "y": 255.01659149593917
+            },
+            {
+              "x": 431.80270562073287,
+              "y": 240.54047047120747
+            },
+            {
+              "x": 434.0008157829365,
+              "y": 282.4829109308996
+            },
+            {
+              "x": 157.77997180193492,
+              "y": 296.9590319556313
+            }
+          ],
+          "envelope": {
+            "x": 155.58186163973127,
+            "y": 240.54047047120747,
+            "width": 278.41895414320527,
+            "height": 56.41856148442383
+          }
+        },
+        {
+          "id": "negative-fine-skew-anchor-2",
+          "expectedToken": "RAVENBBB",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 761.7386296999209,
+              "y": 509.64175233992455
+            },
+            {
+              "x": 1033.9649555419041,
+              "y": 495.3749751401646
+            },
+            {
+              "x": 1036.058393791622,
+              "y": 535.3201565303475
+            },
+            {
+              "x": 763.8320679496387,
+              "y": 549.5869337301075
+            }
+          ],
+          "envelope": {
+            "x": 761.7386296999209,
+            "y": 495.3749751401646,
+            "width": 274.319764091701,
+            "height": 54.21195858994287
+          }
+        },
+        {
+          "id": "negative-fine-skew-anchor-3",
+          "expectedToken": "WAGONCCC",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 314.2846562716536,
+              "y": 837.5090146020409
+            },
+            {
+              "x": 590.5055002526551,
+              "y": 823.0328935773092
+            },
+            {
+              "x": 592.7036104148588,
+              "y": 864.9753340370014
+            },
+            {
+              "x": 316.48276643385725,
+              "y": 879.4514550617331
+            }
+          ],
+          "envelope": {
+            "x": 314.2846562716536,
+            "y": 823.0328935773092,
+            "width": 278.41895414320516,
+            "height": 56.41856148442389
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 1703,
+          "height": 1101
+        }
+      },
+      "manualRotation": 0,
+      "fineSkewDegrees": -3,
+      "expectedTilingStrategy": "single-canvas",
+      "categoryTags": [
+        "fine-skew",
+        "negative-skew",
+        "landscape-source"
+      ],
+      "fastSmoke": false,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 58,
+        "renderTransform": [
+          0.9986295347545738,
+          -0.05233595624294383,
+          0.05233595624294383,
+          0.9986295347545738,
+          -27.643992755260115,
+          45.31850785847382
+        ]
+      },
+      "imageSha256": "7d2593dadd351f678caefbbddd732173fd095288fa3ec447cbadf96bfa851e11"
+    },
+    {
+      "id": "native-tile-seams",
+      "image": "native-tile-seams.png",
+      "sourceSize": {
+        "width": 1501,
+        "height": 7601
+      },
+      "anchors": [
+        {
+          "id": "native-tile-seams-anchor-1",
+          "expectedToken": "PAGESTART",
+          "critical": true,
+          "readingOrder": 0,
+          "polygon": [
+            {
+              "x": 94,
+              "y": 112
+            },
+            {
+              "x": 381.199951171875,
+              "y": 112
+            },
+            {
+              "x": 381.199951171875,
+              "y": 151
+            },
+            {
+              "x": 94,
+              "y": 151
+            }
+          ],
+          "envelope": {
+            "x": 94,
+            "y": 112,
+            "width": 287.199951171875,
+            "height": 39
+          }
+        },
+        {
+          "id": "native-tile-seams-anchor-2",
+          "expectedToken": "REPEATER",
+          "critical": true,
+          "readingOrder": 1,
+          "polygon": [
+            {
+              "x": 184,
+              "y": 1012
+            },
+            {
+              "x": 437.7999572753906,
+              "y": 1012
+            },
+            {
+              "x": 437.7999572753906,
+              "y": 1050
+            },
+            {
+              "x": 184,
+              "y": 1050
+            }
+          ],
+          "envelope": {
+            "x": 184,
+            "y": 1012,
+            "width": 253.79995727539062,
+            "height": 38
+          }
+        },
+        {
+          "id": "native-tile-seams-anchor-3",
+          "expectedToken": "UPPERMID",
+          "critical": true,
+          "readingOrder": 2,
+          "polygon": [
+            {
+              "x": 743,
+              "y": 3612
+            },
+            {
+              "x": 997.7999572753906,
+              "y": 3612
+            },
+            {
+              "x": 997.7999572753906,
+              "y": 3651
+            },
+            {
+              "x": 743,
+              "y": 3651
+            }
+          ],
+          "envelope": {
+            "x": 743,
+            "y": 3612,
+            "width": 254.79995727539062,
+            "height": 39
+          }
+        },
+        {
+          "id": "native-tile-seams-anchor-4",
+          "expectedToken": "SEAMWORD",
+          "critical": true,
+          "readingOrder": 3,
+          "polygon": [
+            {
+              "x": 171,
+              "y": 3762
+            },
+            {
+              "x": 427.7999572753906,
+              "y": 3762
+            },
+            {
+              "x": 427.7999572753906,
+              "y": 3801
+            },
+            {
+              "x": 171,
+              "y": 3801
+            }
+          ],
+          "envelope": {
+            "x": 171,
+            "y": 3762,
+            "width": 256.7999572753906,
+            "height": 39
+          }
+        },
+        {
+          "id": "native-tile-seams-anchor-5",
+          "expectedToken": "LOWERMID",
+          "critical": true,
+          "readingOrder": 4,
+          "polygon": [
+            {
+              "x": 765,
+              "y": 3912
+            },
+            {
+              "x": 1017.7999572753906,
+              "y": 3912
+            },
+            {
+              "x": 1017.7999572753906,
+              "y": 3951
+            },
+            {
+              "x": 765,
+              "y": 3951
+            }
+          ],
+          "envelope": {
+            "x": 765,
+            "y": 3912,
+            "width": 252.79995727539062,
+            "height": 39
+          }
+        },
+        {
+          "id": "native-tile-seams-anchor-6",
+          "expectedToken": "REPEATER",
+          "critical": true,
+          "readingOrder": 5,
+          "polygon": [
+            {
+              "x": 764,
+              "y": 6512
+            },
+            {
+              "x": 1017.7999572753906,
+              "y": 6512
+            },
+            {
+              "x": 1017.7999572753906,
+              "y": 6550
+            },
+            {
+              "x": 764,
+              "y": 6550
+            }
+          ],
+          "envelope": {
+            "x": 764,
+            "y": 6512,
+            "width": 253.79995727539062,
+            "height": 38
+          }
+        },
+        {
+          "id": "native-tile-seams-anchor-7",
+          "expectedToken": "PAGEEND9",
+          "critical": true,
+          "readingOrder": 6,
+          "polygon": [
+            {
+              "x": 94,
+              "y": 7442
+            },
+            {
+              "x": 347.7999572753906,
+              "y": 7442
+            },
+            {
+              "x": 347.7999572753906,
+              "y": 7481
+            },
+            {
+              "x": 94,
+              "y": 7481
+            }
+          ],
+          "envelope": {
+            "x": 94,
+            "y": 7442,
+            "width": 253.79995727539062,
+            "height": 39
+          }
+        }
+      ],
+      "coordinateSpace": "source-image",
+      "pixelEdgeConvention": "top-left origin; floating-point pixel edges; right and bottom rectangle edges are exclusive",
+      "contentMode": "document",
+      "enhancementPreset": "adaptive-document",
+      "crop": {
+        "normalised": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "sourcePixelEdges": {
+          "x": 0,
+          "y": 0,
+          "width": 1501,
+          "height": 7601
+        }
+      },
+      "manualRotation": 0,
+      "fineSkewDegrees": 0,
+      "expectedTilingStrategy": "vertical-tiles",
+      "categoryTags": [
+        "native-tiling",
+        "tile-overlap",
+        "tile-seam",
+        "repeated-token",
+        "portrait-source"
+      ],
+      "fastSmoke": false,
+      "generator": {
+        "font": "IBM Plex Mono 600",
+        "fontSize": 54,
+        "renderTransform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "imageSha256": "8639eaaebe31eaa29396dc5ab7dcbf5ae30c9ef42388705641be94615a04c28e"
+    }
+  ]
+}

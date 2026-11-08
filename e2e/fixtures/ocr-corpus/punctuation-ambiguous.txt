@@ -1,0 +1,4 @@
+CHECK O/0 I/l/1
+Serial: O0I1l-507
+Amount: $1,024.50
+Symbols: ! ? : ; ( ) [ ] { }

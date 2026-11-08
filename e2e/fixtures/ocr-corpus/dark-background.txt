@@ -1,0 +1,4 @@
+LOCAL TERMINAL
+Browser OCR is active.
+Reference DARK-808
+No remote request required.

@@ -1,0 +1,1018 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-06",
+  "scope": "20 bounded synthetic PDFs and one reused lawful public linearized file; 22 contracts include active-content OCR reuse. Native browser results are separate. No fixtures belong in deployed output.",
+  "generator": "tools/pdf-release/complex-fixtures.py",
+  "bounds": {
+    "maximumDeclaredStreamBytes": 8388608,
+    "maximumDecodedStreamBytes": 10485760,
+    "maximumNestedSyntaxBytes": 32768,
+    "nestedArrayDepth": 2048
+  },
+  "fixtures": [
+    {
+      "id": "control-simple",
+      "category": "control",
+      "categories": [
+        "control"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/control-simple.pdf",
+      "bytes": 682,
+      "sha256": "4b2d472a19d683d01228786749a86c424d102500140736cbe11d5d19f73922fd",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "COMPLEX BASE REVISION 13579"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Ordinary xref table offsets generated from exact object bytes; one Helvetica text page."
+      ],
+      "notes": []
+    },
+    {
+      "id": "truncated",
+      "category": "truncated-file",
+      "categories": [
+        "truncated-file"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/truncated.pdf",
+      "bytes": 64,
+      "sha256": "2d47a05c37cefe96d0ca40933f463fec60543485766bdfe65c409888ab0fb458",
+      "expected": {
+        "outcomes": [
+          "document rejected safely"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [],
+        "pageCount": null,
+        "requiredText": [],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [
+          "PDF_OPEN_FAILED"
+        ],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false,
+        "rejectionStage": "selection"
+      },
+      "structureAssertions": [
+        "Only the first 64 bytes of control-simple remain; root/page/content objects and trailer are absent."
+      ],
+      "notes": []
+    },
+    {
+      "id": "invalid-xref-table",
+      "category": "invalid-xref-table",
+      "categories": [
+        "invalid-xref-table"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/invalid-xref-table.pdf",
+      "bytes": 682,
+      "sha256": "8ac3a3dc8ffa32287c22d3b16ee2f267e969ac0dc9a40508a00dbe25fe53cca6",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "COMPLEX BASE REVISION 13579"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Page object xref offset is 1, inside the PDF header; all object bodies remain complete."
+      ],
+      "notes": [
+        "Expected parser recovery is tested without requiring an app warning; PDF.js console diagnostics are not user-visible warnings."
+      ]
+    },
+    {
+      "id": "object-streams",
+      "category": "object-streams",
+      "categories": [
+        "object-streams"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/object-streams.pdf",
+      "bytes": 642,
+      "sha256": "cd1b21ea3450784eeeb2b7ae7d41dc1ce843c7e49f72f37ec5b54c7f9d84f398",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "OBJECT STREAM SENTINEL 31415"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Catalog, Pages, Font and Page objects reside inside one Flate ObjStm with N=4 and verified First offset.",
+        "XRef stream uses W=[1,4,2], four type-2 entries and exact type-1 offsets; independent pypdf extracts the sentinel."
+      ],
+      "notes": []
+    },
+    {
+      "id": "invalid-xref-stream",
+      "category": "invalid-xref-stream",
+      "categories": [
+        "invalid-xref-stream"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/invalid-xref-stream.pdf",
+      "bytes": 642,
+      "sha256": "fecc878eb180afbb0d43ef20f1b3ae8cf729e28deda9e6d8ef467b599ddcad5a",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning",
+          "document rejected safely"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "OBJECT STREAM SENTINEL 31415"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [
+          "PDF_OPEN_FAILED"
+        ],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false,
+        "rejectionStage": "selection"
+      },
+      "structureAssertions": [
+        "XRef W=[1,0,0] cannot represent original offset/object-stream-index fields; catalog remains inside compressed objects."
+      ],
+      "notes": [
+        "Before native browser evaluation, independent parsers disagree: pypdf rejects missing Root while Poppler recovers the page. Either safe selection rejection or complete sentinel extraction is acceptable; silent incomplete success is not."
+      ]
+    },
+    {
+      "id": "hybrid-reference",
+      "category": "hybrid-reference",
+      "categories": [
+        "hybrid-reference"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/hybrid-reference.pdf",
+      "bytes": 917,
+      "sha256": "35bf7eb2fed1812b07d4dedbea221bc9d81da42de8f146b6b8af456196da29d7",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "OBJECT STREAM SENTINEL 31415"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Traditional trailer XRefStm points at a supplementary XRef stream containing the compressed Page object's type-2 entry.",
+        "Catalog/Pages/Font/Contents remain table-referenced; independent pypdf resolves compressed Page and extracts sentinel."
+      ],
+      "notes": []
+    },
+    {
+      "id": "incremental-update",
+      "category": "incremental-update",
+      "categories": [
+        "incremental-update"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/incremental-update.pdf",
+      "bytes": 959,
+      "sha256": "437c2e4b27b006dcc12e1c3882ef16e245fd8a0c8a297a239eb0a5a4aa452a5e",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "COMPLEX CURRENT REVISION 24680"
+          }
+        ],
+        "forbiddenText": [
+          {
+            "page": 1,
+            "text": "COMPLEX BASE REVISION 13579"
+          }
+        ],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Exact baseline bytes form revision 1; appended replacement Contents object 5 and xref subsection form revision 2; Prev equals original startxref."
+      ],
+      "notes": []
+    },
+    {
+      "id": "nested-content-array",
+      "category": "nested-objects",
+      "categories": [
+        "nested-objects"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/nested-content-array.pdf",
+      "bytes": 4788,
+      "sha256": "8c12075a419d182fc3d3f436a2b348a2deb0e8f02395e96d361405a61689c7d5",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "BOUNDED NESTING SENTINEL 2048"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Reachable page content contains 2048 nested array levels (4102 bytes), then an independent text operator.",
+        "Only bounded syntax; no recursive indirect-object cycle or unbounded pressure."
+      ],
+      "notes": [
+        "Unknown content operator pop discards the array operand; this fixture exercises parsing rather than valid graphics semantics."
+      ]
+    },
+    {
+      "id": "declared-stream-length",
+      "category": "declared-stream-pressure",
+      "categories": [
+        "declared-stream-pressure"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/declared-stream-length.pdf",
+      "bytes": 688,
+      "sha256": "b68b38f82ebd1814812768f2742102f0bcb025a68eea7081bf4657003a00670d",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "DECLARED LENGTH SENTINEL 8388"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Contents declares 8,388,608 bytes but the physical stream contains fewer than 200 bytes; complete endstream/xref remain."
+      ],
+      "notes": []
+    },
+    {
+      "id": "flate-pressure",
+      "category": "bounded-decompression",
+      "categories": [
+        "bounded-decompression"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/flate-pressure.pdf",
+      "bytes": 10889,
+      "sha256": "8b5826f3180b7353f28ada0726d942eca10190632cce6d95b35f0462f601ec61",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "BOUNDED FLATE SENTINEL 4096"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "A single Flate stream expands to exactly 4194423 bytes of benign comments and text, below the 10 MiB budget."
+      ],
+      "notes": []
+    },
+    {
+      "id": "zero-page",
+      "category": "zero-page",
+      "categories": [
+        "zero-page"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/zero-page.pdf",
+      "bytes": 330,
+      "sha256": "406442c7ce4607c401520336f572a63aa56d28b78688556811aafd9c4ebd85c8",
+      "expected": {
+        "outcomes": [
+          "document rejected safely"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [],
+        "pageCount": 0,
+        "requiredText": [],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [
+          "PDF_OPEN_FAILED"
+        ],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false,
+        "rejectionStage": "selection"
+      },
+      "structureAssertions": [
+        "Valid catalog and Pages tree with Count=0 and empty Kids; no Page objects."
+      ],
+      "notes": []
+    },
+    {
+      "id": "blank-pages-26",
+      "category": "many-blank-pages",
+      "categories": [
+        "many-blank-pages"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/blank-pages-26.pdf",
+      "bytes": 6197,
+      "sha256": "4dd26299d6b18140e46bcaf47687ea87d949d0523373a748200b8516e8412519",
+      "expected": {
+        "outcomes": [
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "pageCount": 26,
+        "requiredText": [],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "26 independent Page objects, each with a zero-length Contents stream; below document and selection limits, above the 25-page OCR limit."
+      ],
+      "notes": [
+        "Primary contract uses embedded text only. This fixture does not by itself test cancellation or the OCR limit; those require a separate UI action."
+      ]
+    },
+    {
+      "id": "extreme-dimensions",
+      "category": "extreme-dimensions",
+      "categories": [
+        "extreme-dimensions"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/extreme-dimensions.pdf",
+      "bytes": 676,
+      "sha256": "1a40d149425dd0f6fcdf3bef34c0d6f405f9aa65ea40518393456961136c441e",
+      "expected": {
+        "outcomes": [
+          "supported with warning"
+        ],
+        "mode": "ocr-all",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "EXTREME PAGE 4096"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [
+          "PAGE_RENDER_REDUCED"
+        ],
+        "emptyPages": [],
+        "requiresRender": true,
+        "downscaled": true,
+        "downscaledPages": [
+          1
+        ]
+      },
+      "structureAssertions": [
+        "MediaBox=14400x14400 points; 400-point Helvetica text remains legible at a 4096-pixel maximum side."
+      ],
+      "notes": []
+    },
+    {
+      "id": "mixed-dimensions",
+      "category": "mixed-dimensions",
+      "categories": [
+        "mixed-dimensions"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/mixed-dimensions.pdf",
+      "bytes": 1342,
+      "sha256": "1eb22b9d123a56cea4ef13f581a2d8ac4479d83afb47ad6556b151d3772bfb24",
+      "expected": {
+        "outcomes": [
+          "supported with warning"
+        ],
+        "mode": "ocr-all",
+        "selectedPages": [
+          1,
+          2,
+          3
+        ],
+        "pageCount": 3,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "SIZE PAGE 1"
+          },
+          {
+            "page": 2,
+            "text": "SIZE PAGE 2"
+          },
+          {
+            "page": 3,
+            "text": "SIZE PAGE 3"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [
+          "PAGE_RENDER_REDUCED"
+        ],
+        "emptyPages": [],
+        "requiresRender": true,
+        "downscaledPages": [
+          3
+        ]
+      },
+      "structureAssertions": [
+        "MediaBoxes independently equal 612x792, 300x300 and 14400x3600 points; page 3 requires render reduction."
+      ],
+      "notes": []
+    },
+    {
+      "id": "huge-text-layer",
+      "category": "huge-text-layer",
+      "categories": [
+        "huge-text-layer"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/huge-text-layer.pdf",
+      "bytes": 250723,
+      "sha256": "7daaf02356275fa7a5fb75f1f6cd1ec45786d0435a56deec27e36d9e87422f58",
+      "expected": {
+        "outcomes": [
+          "page failed and processing continued"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [],
+        "forbiddenText": [],
+        "failedPages": [
+          1
+        ],
+        "safeErrorCodes": [
+          "PDF_PAGE_TEXT_LIMIT_EXCEEDED"
+        ],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Single hidden Tj string has exactly 250001 ASCII/UTF-16 characters, above the 250000-character page cap; visible caption adds further text."
+      ],
+      "notes": [
+        "Failure is required; silent truncation or apparent successful partial extraction is not acceptable. One-page file has no later page to continue."
+      ]
+    },
+    {
+      "id": "damaged-page",
+      "category": "damaged-page-continuation",
+      "categories": [
+        "damaged-page-continuation"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/damaged-page.pdf",
+      "bytes": 950,
+      "sha256": "a16c0945e2ad41af66f5d4b94cc34c4c531b87a38a100fdf41056e04fd066590",
+      "expected": {
+        "outcomes": [
+          "page failed and processing continued"
+        ],
+        "mode": "automatic",
+        "selectedPages": [
+          1,
+          2
+        ],
+        "pageCount": 2,
+        "requiredText": [
+          {
+            "page": 2,
+            "text": "UNDAMAGED SECOND PAGE 86420"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [
+          1
+        ],
+        "safeErrorCodes": [
+          "PDF_PAGE_RENDER_FAILED",
+          "PDF_PAGE_TEXT_EXTRACTION_FAILED"
+        ],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Page 1 Contents FlateDecode bytes independently fail zlib header validation; page 2 has a separate valid plain text stream."
+      ],
+      "notes": [
+        "Must fail page 1 safely and preserve page 2 output; no runtime error string is permitted in UI."
+      ]
+    },
+    {
+      "id": "active-content",
+      "category": "active-content",
+      "categories": [
+        "attachments",
+        "javascript-actions",
+        "links-launch",
+        "acroforms",
+        "xfa",
+        "invalid-signature-marker"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/active-content.pdf",
+      "bytes": 3164,
+      "sha256": "8f1c3c6fa5d8e0effdb1d9a543093b39a69de4dc847e1c4288d30ee5a8c6bdbb",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "intentionally unsupported"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "ACTIVE CONTENT TEST 12345"
+          }
+        ],
+        "forbiddenText": [
+          {
+            "page": 1,
+            "text": "ATTACHMENT_PAYLOAD_SHOULD_NOT_BE_EXTRACTED_1618"
+          },
+          {
+            "page": 1,
+            "text": "PDF_JS_SHOULD_NOT_RUN_2718"
+          }
+        ],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Catalog EmbeddedFiles, JavaScript Names and OpenAction refer to real reachable objects.",
+        "Link annotations contain URI about:blank and Launch of a nonexistent local .txt file; field AA/U points to SubmitForm about:blank.",
+        "AcroForm Fields entries are the exact merged Widget references in page Annots; text field V matches its explicit appearance stream.",
+        "XFA contains a bounded static XML template with no script/external resource; signature marker ByteRange=[0,0,0,0], Contents=<00> is deliberately invalid."
+      ],
+      "notes": [
+        "No real trusted signature, certificate, live endpoint, executable launch, form submission, or attachment extraction is involved. Visible form appearances may legitimately appear in OCR output. Feature non-execution requires separate browser evidence."
+      ]
+    },
+    {
+      "id": "runlength-ascii85-image",
+      "category": "additional-compression",
+      "categories": [
+        "additional-compression"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/runlength-ascii85-image.pdf",
+      "bytes": 133409,
+      "sha256": "60f35cffeaa655f82bb64d1146553493008675315158ab6279501aad2ca8a843",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "ocr-all",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "RUNLENGTH ASCII85 2468"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": true
+      },
+      "structureAssertions": [
+        "Image XObject uses ordered ASCII85Decode then RunLengthDecode; independently decoded bytes exactly match 720x150 8-bit grayscale pixels (108000 bytes)."
+      ],
+      "notes": []
+    },
+    {
+      "id": "linearized-cfpb-savings",
+      "category": "linearized",
+      "categories": [
+        "linearized",
+        "public-form"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-release-corpus/cfpb-savings.pdf",
+      "bytes": 79250,
+      "sha256": "cf2cd999815792281b9639ee41536f591fed42fb9c2406b149a06dbae637be3e",
+      "source": {
+        "url": "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_savings_plan_tool_2018-11_ADA.pdf",
+        "retrievedAt": "2026-09-06T01:28:05.098Z"
+      },
+      "rights": {
+        "basis": "CFPB-created information is public domain under the CFPB website policy; agency marks and credited third-party content are excluded. These are blank CFPB worksheets.",
+        "url": "https://www.consumerfinance.gov/privacy/website-privacy-policy/",
+        "credit": "Source: Consumer Financial Protection Bureau."
+      },
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 3,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "savings"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Original corpus SHA is unchanged; Linearized /L exactly matches file bytes; independent Poppler reports Optimized yes.",
+        "Independent pypdf resolves all three pages and first-page savings text."
+      ],
+      "notes": [
+        "Existing public source reused byte-for-byte; not newly authored or copied. Offline behavior needs native browser evidence, not just this structure check."
+      ]
+    },
+    {
+      "id": "active-content-render",
+      "category": "active-content",
+      "categories": [
+        "attachments",
+        "javascript-actions",
+        "links-launch",
+        "acroforms",
+        "xfa",
+        "invalid-signature-marker"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/active-content.pdf",
+      "bytes": 3164,
+      "sha256": "8f1c3c6fa5d8e0effdb1d9a543093b39a69de4dc847e1c4288d30ee5a8c6bdbb",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "intentionally unsupported"
+        ],
+        "mode": "ocr-all",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "ACTIVE CONTENT TEST 12345"
+          }
+        ],
+        "forbiddenText": [
+          {
+            "page": 1,
+            "text": "ATTACHMENT_PAYLOAD_SHOULD_NOT_BE_EXTRACTED_1618"
+          },
+          {
+            "page": 1,
+            "text": "PDF_JS_SHOULD_NOT_RUN_2718"
+          }
+        ],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": true
+      },
+      "structureAssertions": [
+        "Catalog EmbeddedFiles, JavaScript Names and OpenAction refer to real reachable objects.",
+        "Link annotations contain URI about:blank and Launch of a nonexistent local .txt file; field AA/U points to SubmitForm about:blank.",
+        "AcroForm Fields entries are the exact merged Widget references in page Annots; text field V matches its explicit appearance stream.",
+        "XFA contains a bounded static XML template with no script/external resource; signature marker ByteRange=[0,0,0,0], Contents=<00> is deliberately invalid."
+      ],
+      "notes": [
+        "No real trusted signature, certificate, live endpoint, executable launch, form submission, or attachment extraction is involved. Visible form appearances may legitimately appear in OCR output. Feature non-execution requires separate browser evidence.",
+        "Additive render/OCR contract reuses the identical active-content.pdf SHA. Ordinary page caption remains required, script/attachment payloads forbidden; no requirement to include or exclude visible form appearance text."
+      ]
+    },
+    {
+      "id": "hybrid-reference-valid",
+      "category": "hybrid-reference",
+      "categories": [
+        "hybrid-reference",
+        "incremental-update",
+        "optional-compressed-info"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/hybrid-reference-valid.pdf",
+      "bytes": 1116,
+      "sha256": "91d11b451c5bcc4d2ac45906b68e9350e06fbb2c5dbec9d8bd11655ef81b91fd",
+      "expected": {
+        "outcomes": [
+          "supported",
+          "supported with warning"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [
+          {
+            "page": 1,
+            "text": "VALID HYBRID PAGE 31415"
+          }
+        ],
+        "forbiddenText": [],
+        "failedPages": [],
+        "safeErrorCodes": [],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "Original complete ordinary one-page PDF is preserved byte-for-byte; update table contains only new ObjStm6 and XRefStream7 entries, with Prev pointing to original xref.",
+        "Supplemental XRefStream7 Index=[8,1] contains type2(objectstream6,index0); no current table entry conflicts with compressed Info8.",
+        "Catalog/Pages/Page/Font/Contents all remain uncompressed and independently readable; optional Info8 is inside ObjStm6.",
+        "Independent pypdf metadata and Poppler pdfinfo both resolve exact Title HYBRID OPTIONAL INFO 27182; Poppler emits no xref-reconstruction diagnostic."
+      ],
+      "notes": [
+        "Additive fixture preserves the original conflicting-entry hybrid bytes, unsupported expectation and initial native failure. This fixture was independently verified before its browser run.",
+        "The app does not request getMetadata. Native ordinary-page extraction proves opening/processing this structurally verified hybrid; it does not prove app consumption of optional compressed Info."
+      ]
+    },
+    {
+      "id": "huge-text-layer-contained",
+      "category": "huge-text-layer",
+      "categories": [
+        "huge-text-layer",
+        "within-page-hidden-glyphs"
+      ],
+      "availability": "available",
+      "file": "tmp/pdf-complex-20260906/fixtures/huge-text-layer-contained.pdf",
+      "bytes": 250727,
+      "sha256": "c99ea88bca1915633c621bdb95a368edbceeac9218411e4abee781f8cb1298fd",
+      "expected": {
+        "outcomes": [
+          "page failed and processing continued"
+        ],
+        "mode": "embedded-text-only",
+        "selectedPages": [
+          1
+        ],
+        "pageCount": 1,
+        "requiredText": [],
+        "forbiddenText": [],
+        "failedPages": [
+          1
+        ],
+        "safeErrorCodes": [
+          "PDF_PAGE_TEXT_LIMIT_EXCEEDED"
+        ],
+        "warningCodes": [],
+        "emptyPages": [],
+        "requiresRender": false
+      },
+      "structureAssertions": [
+        "One hidden Helvetica Tj string contains exactly 250001 ASCII/UTF-16 characters at font size 0.001pt and origin (10,10).",
+        "Independent Helvetica width metrics give total advance166.750667pt and final x176.750667, entirely inside MediaBox[0,0,612,792]; vertical glyph bounds conservatively remain between9.999 and10.001pt.",
+        "Independent pypdf extracts250028 total characters and the exact250001-character hidden string; entire uncompressed page content is below256KiB."
+      ],
+      "notes": [
+        "Additive correction preserves original huge-text-layer bytes, support-limit expectation and initial browser mismatch. Original1pt hidden line extended outside viewBox and PDF.js yielded only930characters, so it did not exercise the application limit.",
+        "This one-page limit test requires a safe page failure with no successful partial text; it does not prove later-page continuation. No OCR or recognition quality claim is involved."
+      ]
+    }
+  ],
+  "untestedCategories": [
+    {
+      "category": "unbounded-hostile-resources",
+      "reason": "No decompression bomb, cyclic page tree, multi-gigabyte declaration, or destructive stress input is generated; bounded samples cannot close unbounded resource safety."
+    },
+    {
+      "category": "valid-cryptographic-signature",
+      "reason": "Only an explicitly invalid synthetic signature marker is included. Trust validation and real signed documents remain unsupported/unverified."
+    },
+    {
+      "category": "additional-compression-not-covered",
+      "reason": "This bundle adds RunLengthDecode plus ASCII85; LZW and CCITT are not covered here. Existing separate upstream cases cover JPX, JBIG2 and ICC."
+    },
+    {
+      "category": "dynamic-xfa",
+      "reason": "Only static bounded XFA packet presence is covered. Complex dynamic XFA execution/rendering is intentionally unsupported."
+    },
+    {
+      "category": "physical-memory-pressure",
+      "reason": "No physical-device resource or platform support claim follows from these desktop-bounded fixtures."
+    }
+  ]
+}

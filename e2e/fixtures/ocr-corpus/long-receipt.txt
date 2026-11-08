@@ -1,0 +1,42 @@
+PRIVATE IMAGE TO TEXT LONG RECEIPT
+Receipt 004281
+TOP-1001
+Item 01  Paper clips                 $2.40
+Item 02  Graph pad                   $6.75
+Item 03  Blue pens                   $4.20
+Item 04  Archive box                 $8.50
+Item 05  Mailing labels              $5.80
+Item 06  Desk calendar              $12.00
+Item 07  Binder tabs                  $3.35
+Item 08  Cable ties                   $2.95
+Item 09  Storage pouch                $7.25
+Item 10  Index cards                  $4.60
+Department: OFFICE
+Reference: RECEIPT-A20
+Item 11  Whiteboard pen               $5.40
+Item 12  Notebook                     $9.80
+Item 13  Document wallet              $3.90
+Item 14  Staple pack                  $4.35
+MID-5050
+Item 15  File dividers                $6.10
+Item 16  Shipping tape                $7.45
+Item 17  Ruler                        $2.20
+Item 18  Scissors                     $8.90
+Item 19  Sticky notes                 $4.75
+Item 20  Receipt roll                 $3.60
+Department: SUPPLIES
+Reference: RECEIPT-B70
+Item 21  USB cable                    $9.95
+Item 22  Cleaning cloth               $3.25
+Item 23  Label holder                 $4.15
+Item 24  Packing card                 $2.80
+Item 25  Desk tray                   $11.50
+Item 26  Marker set                   $8.25
+Item 27  Envelope pack                $6.85
+Item 28  Clipboard                    $7.70
+Subtotal                           $167.65
+Tax                                 $16.67
+TOTAL                              $184.32
+Payment: CARD-4482
+BOTTOM-9009
+Processed locally in the browser.

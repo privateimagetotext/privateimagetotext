@@ -1,0 +1,47 @@
+:root {
+  color: #18212b;
+  background: #f5f7f9;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 64rem;
+  padding: 1rem;
+}
+
+label,
+#password-panel {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 32rem;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  padding: 0.55rem;
+}
+
+button {
+  width: fit-content;
+}
+
+canvas {
+  background: white;
+  border: 1px solid #b8c1cc;
+  height: auto;
+  max-width: 100%;
+}
+
+pre {
+  background: #101820;
+  color: #e8f2ff;
+  min-height: 8rem;
+  overflow: auto;
+  padding: 1rem;
+  white-space: pre-wrap;
+}

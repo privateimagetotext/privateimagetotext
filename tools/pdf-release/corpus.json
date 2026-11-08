@@ -1,0 +1,1851 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-06",
+  "scope": "Local release evidence only. Twenty real public documents plus three upstream decoder fixtures and seven synthetic controls. No private documents; no fixture bytes in the deployed site.",
+  "expectedTokenSemantics": "Unicode NFKC, case-insensitive, whitespace-insensitive substring smoke checks. These do not certify reading order, table associations, equation fidelity, or complete usefulness.",
+  "coverageGaps": [
+    "Browser print-to-PDF with verified browser provenance",
+    "Known printer hardware scans and mobile scanning-app exports",
+    "Real receipts (no personal material)",
+    "Real mixed selectable/image-only documents (synthetic only)",
+    "Real rotated, password, and broken-font examples (synthetic or partial cases only)",
+    "RTL embedded text and vertical writing",
+    "Long/extreme pages and render downscaling",
+    "Hostile/malformed PDF matrix beyond signature/file-size/OCR-cap controls",
+    "Physical-device memory pressure and real Safari/Edge release support",
+    "Human review of output usefulness on every selected page"
+  ],
+  "cases": [
+    {
+      "id": "nist-fips180-4",
+      "kind": "real-document",
+      "title": "NIST FIPS 180-4: Secure Hash Standard",
+      "filename": "nist-fips180-4.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
+        "retrievedAt": "2026-09-06T01:27:37.860Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 833315,
+      "sha256": "0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82",
+      "pageCount": 36,
+      "producer": "Microsoft® Word 2010",
+      "creator": "Microsoft® Word 2010",
+      "tags": [
+        "office-export",
+        "math",
+        "technical-report"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 8,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "INTRODUCTION",
+            "SHA-512/256",
+            "message digest"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2110,
+            "independentTextSha256": "173edd7657a2766b0d1cf0582fe7d81374be544d0340ae2c2b5a376df337d897",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 20,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "SHA-256",
+            "6a09e667",
+            "5be0cd19"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1198,
+            "independentTextSha256": "a4ffdbb6ea2ef2a943822233e48aa7117708fac5ad8c10c9d68d174e90b1a700",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "nist-fips186-5",
+      "kind": "real-document",
+      "title": "NIST FIPS 186-5: Digital Signature Standard",
+      "filename": "nist-fips186-5.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf",
+        "retrievedAt": "2026-09-06T01:27:40.808Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 1844414,
+      "sha256": "fbb9c7c2ba442f03c57b63b43c888311903c9d0f29f89b06efdebd9b619140c5",
+      "pageCount": 86,
+      "producer": "Adobe PDF Library 22.3.86",
+      "creator": "Acrobat PDFMaker 22 for Word",
+      "tags": [
+        "office-export",
+        "math",
+        "technical-report"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 10,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "digital signature",
+            "binary data",
+            "RSA"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2548,
+            "independentTextSha256": "ede5068eb5b47405ecf66dc3df391dacf0fdde4ef0211b1743b85cc0bc15ff38",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 34,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "ECDSA Signature Verification Algorithm",
+            "Accept or reject",
+            "Assurances"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2011,
+            "independentTextSha256": "e8b84e0dda2eb564fdfc2c91d5f75c5206e3e7435ef55344c938780ab31df411",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "nist-fips197",
+      "kind": "real-document",
+      "title": "NIST FIPS 197: Advanced Encryption Standard",
+      "filename": "nist-fips197.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf",
+        "retrievedAt": "2026-09-06T01:27:43.100Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 1184436,
+      "sha256": "62c86eb567f13edb8f71826e985da870b04ef6381634f303cdb16e84d47becd1",
+      "pageCount": 46,
+      "producer": "pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+      "creator": "LaTeX with hyperref",
+      "tags": [
+        "latex-export",
+        "pseudocode",
+        "ligatures"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 9,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Rijndael",
+            "block cipher",
+            "Advanced Encryption Standard"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1954,
+            "independentTextSha256": "15924ffdcbc3e098b2cf105791d7ef78d1dc6cd4c85bea06b134b2e92d48ae0a",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 20,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "KEYEXPANSION",
+            "MIXCOLUMNS",
+            "Algorithm 1"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2056,
+            "independentTextSha256": "c33477ba437bc355c32bde5dc63e1817b23c99467734939f0040804aa1788374",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Independent extraction loses some fi ligatures (for example fixed becomes fxed). Token smoke checks do not certify complete linguistic or mathematical fidelity."
+    },
+    {
+      "id": "nist-fips198-1",
+      "kind": "real-document",
+      "title": "NIST FIPS 198-1: Keyed-Hash Message Authentication Code",
+      "filename": "nist-fips198-1.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.198-1.pdf",
+        "retrievedAt": "2026-09-06T01:27:45.562Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 129454,
+      "sha256": "67661ba1407b391c799ff407471de18f36697af51d78a777e817c067ac30da23",
+      "pageCount": 13,
+      "producer": "Acrobat Distiller 8.1.0 (Windows)",
+      "creator": "Acrobat PDFMaker 8.1 for Word",
+      "tags": [
+        "office-export",
+        "math",
+        "table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 8,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "integrity",
+            "unreliable medium",
+            "HMAC"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2307,
+            "independentTextSha256": "621036af2939a8c8f57471b43c916af8a29aa0bac8044801566c2d46f1c6509f",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 10,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "CRYPTOGRAPHIC KEYS",
+            "HMAC SPECIFICATION",
+            "800-107"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1696,
+            "independentTextSha256": "9a335eb4689d548d6454628917a9a76cae00dfed954d382b37ffaa00108960a3",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "nist-fips202",
+      "kind": "real-document",
+      "title": "NIST FIPS 202: SHA-3 Standard",
+      "filename": "nist-fips202.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf",
+        "retrievedAt": "2026-09-06T01:27:49.011Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 1459683,
+      "sha256": "1592607831ff0908cc590632ce371c6c95e94025bb1a0c8ae90a4d0ec1ed025e",
+      "pageCount": 37,
+      "producer": "Microsoft® Word 2010",
+      "creator": "Microsoft® Word 2010",
+      "tags": [
+        "office-export",
+        "diagram",
+        "pseudocode"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 9,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "KECCAK",
+            "sponge construction",
+            "INTRODUCTION"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 3372,
+            "independentTextSha256": "d931f2551c424e2b697bede3ccd09d7c7fba07862baeb1ceefc36a3aa844fff8",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 20,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "XOR",
+            "Specification",
+            "columns"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1165,
+            "independentTextSha256": "764533186690ae8f6672787f4b4a38f7e2f2e594ce16ebeb1cb0ac7d34b2df3d",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "nist-sp800-38a",
+      "kind": "real-document",
+      "title": "NIST SP 800-38A: Block Cipher Modes of Operation",
+      "filename": "nist-sp800-38a.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf",
+        "retrievedAt": "2026-09-06T01:27:50.619Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 378266,
+      "sha256": "66821162de1e7130c5fb5eedb22140d8d6d013ec51af4550bb095c2a9481a00e",
+      "pageCount": 66,
+      "producer": "Acrobat Distiller 4.0 for Windows",
+      "creator": "PSCRIPT.DRV Version 4.0",
+      "tags": [
+        "postscript-export",
+        "monospace",
+        "hexadecimal"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 8,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Purpose",
+            "symmetric key block cipher",
+            "Authority"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2729,
+            "independentTextSha256": "d569bfbd0d7612f3bc637109e65f231f269d63b1b01044ff89b9de08b5966382",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 34,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "CBC Example Vectors",
+            "2b7e151628aed2a6abf7158809cf4f3c",
+            "6bc1bee22e409f96e93d7e117393172a"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1881,
+            "independentTextSha256": "80fb90ba164fdadf0940849545e3b891f6abbaecb78d4497b9f5cb8e52b25c03",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "nist-sp800-38b",
+      "kind": "real-document",
+      "title": "NIST SP 800-38B: CMAC Mode",
+      "filename": "nist-sp800-38b.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-38B.pdf",
+        "retrievedAt": "2026-09-06T01:27:52.287Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 253317,
+      "sha256": "da9dc0f1e1f08af917caf4a831a7497cf18997b8046353af89570a812f1ec5a2",
+      "pageCount": 21,
+      "producer": "Adobe PDF Library 15.0",
+      "creator": "Acrobat PDFMaker 15 for Word",
+      "tags": [
+        "office-export",
+        "pseudocode"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 6,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "CMAC",
+            "Conformance Testing",
+            "Cryptographic Module"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2954,
+            "independentTextSha256": "288e3d1ee4dfdb7a1e897ab1deb04a40dd19bc15d3dda48c2b44391ab8d3e6bd",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 12,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Subkey Generation",
+            "MAC Generation",
+            "prerequisites"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2121,
+            "independentTextSha256": "01ab54ef854173c5358990973f1e1032bd927ef5b81a8331b667e00e60d901df",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "nist-sp800-38d",
+      "kind": "real-document",
+      "title": "NIST SP 800-38D: Galois/Counter Mode",
+      "filename": "nist-sp800-38d.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf",
+        "retrievedAt": "2026-09-06T01:27:53.952Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 271960,
+      "sha256": "d99f3921ccebca049e7522426553aba071dae14ec3d5b6041e8c111a6cb57bba",
+      "pageCount": 39,
+      "producer": "Acrobat Distiller 8.1.0 (Windows)",
+      "creator": "Acrobat PDFMaker 8.1 for Word",
+      "tags": [
+        "office-export",
+        "math",
+        "pseudocode"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 9,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Authority",
+            "symmetric key block ciphers",
+            "FISMA"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2852,
+            "independentTextSha256": "a69fa4506689840829dc088cffa9b7b94bcb75398c4c9cf82723cd157a0ecd69",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 20,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "GHASH",
+            "Galois",
+            "multiplication"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1938,
+            "independentTextSha256": "383e1f000843ce183acf9e656a295c33fa2a9f9ef677925bd83a66f119373e2f",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "nist-fips31-archive",
+      "kind": "real-document",
+      "title": "NBS FIPS PUB 31: Physical Security and Risk Management (1974)",
+      "filename": "nist-fips31-archive.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub31.pdf",
+        "retrievedAt": "2026-09-06T01:27:56.710Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 7163308,
+      "sha256": "683b51795e3ddc0c07bf50a5a151bcbc09729fde1561bf2a8e6f6254764c6346",
+      "pageCount": 96,
+      "producer": "Recoded by LuraDocument PDF v2.68",
+      "creator": "Internet Archive",
+      "tags": [
+        "archival-scan",
+        "invisible-ocr",
+        "poor-embedded-ocr",
+        "mixed-page-sizes",
+        "multi-column",
+        "table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "OCR",
+          "expectedTokens": [
+            "FIPS PUB 31",
+            "PHYSICAL SECURITY",
+            "RISK MANAGEMENT"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 282,
+            "independentTextSha256": "3aceff1877bac4ad894264948f05663289d80edba416a9cced090dcf66d9b277",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              580.0,
+              767.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 14,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "annual loss expectancy",
+            "probability",
+            "260,000"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 3536,
+            "independentTextSha256": "013b66cd889023340f690ac8924ebfda3e4e4bceda44594a98feb90331effd36",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              571.0,
+              766.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Real archival scan, scanner hardware unknown. Cover visually reads FIPS PUB 31 and ADP OPERATIONS; independent invisible OCR reads FSPS PUB 51 and ADR OPERATIONS. Cover preference is OCR, but either method still needs manual review. Historical acknowledgments credit contractor Robert V. Jacobson; retain original credits and do not imply the blanket federal-employee rule applies to every contribution. This local test corpus relies on the NIST Technical Series reuse policy, and does not redistribute binaries."
+    },
+    {
+      "id": "irs-1040",
+      "kind": "real-document",
+      "title": "IRS Form 1040 (blank public form)",
+      "filename": "irs-1040.pdf",
+      "source": {
+        "url": "https://www.irs.gov/pub/irs-pdf/f1040.pdf",
+        "retrievedAt": "2026-09-06T01:28:00.258Z"
+      },
+      "rights": {
+        "basis": "IRS-created federal government content is public domain under the IRS reuse policy; agency marks and credited third-party content are excluded. These are blank IRS forms.",
+        "url": "https://www.irs.gov/about-irs/use-of-content-from-irsgov",
+        "credit": "Source: Internal Revenue Service."
+      },
+      "bytes": 220237,
+      "sha256": "3d31c226df0d189ced80e039d01cf0f8820c1019681a0f0ca6264de277b7e982",
+      "pageCount": 2,
+      "producer": "Designer 6.5",
+      "creator": "Designer 6.5",
+      "tags": [
+        "adobe-designer",
+        "blank-form",
+        "table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Individual Income Tax Return",
+            "Filing Status",
+            "Dependents"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 5524,
+            "independentTextSha256": "be991daee7215feee8e6d2bf4e4a99c82aaba5a974a115092afcfcead1e9164d",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 2,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Tax and Credits",
+            "Refund",
+            "Amount You Owe"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 4890,
+            "independentTextSha256": "c90850c2dcabadc3ee81da616a808a0243a68b48ce064a90020ca956a5c0b586",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public form, not a completed taxpayer document. Frozen test revision; never use this corpus as current tax guidance. Form widgets are not submitted or edited."
+    },
+    {
+      "id": "irs-w4",
+      "kind": "real-document",
+      "title": "IRS Form W-4 (blank public form)",
+      "filename": "irs-w4.pdf",
+      "source": {
+        "url": "https://www.irs.gov/pub/irs-pdf/fw4.pdf",
+        "retrievedAt": "2026-09-06T01:28:00.758Z"
+      },
+      "rights": {
+        "basis": "IRS-created federal government content is public domain under the IRS reuse policy; agency marks and credited third-party content are excluded. These are blank IRS forms.",
+        "url": "https://www.irs.gov/about-irs/use-of-content-from-irsgov",
+        "credit": "Source: Internal Revenue Service."
+      },
+      "bytes": 208845,
+      "sha256": "92444d8856ce55d9e25dca8b6d1420634fc68b11e1ab1f760916ea29ddd312b2",
+      "pageCount": 5,
+      "producer": "Designer 6.5",
+      "creator": "Designer 6.5",
+      "tags": [
+        "adobe-designer",
+        "blank-form",
+        "dense-numeric-table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Withholding Certificate",
+            "Step 1",
+            "Personal Information"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 4796,
+            "independentTextSha256": "1386f43f8341b4ee9505935e147f79c6517240e7217b15c433d56a8b38a1cd02",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 5,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Head of Household",
+            "Higher Paying Job",
+            "Married Filing Jointly"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 5138,
+            "independentTextSha256": "444667b56e174b612855b488384b81add9e61c51f371044d180353aff9a57bef",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public form, not a completed taxpayer document. Frozen test revision; never use this corpus as current tax guidance. Form widgets are not submitted or edited."
+    },
+    {
+      "id": "irs-w9",
+      "kind": "real-document",
+      "title": "IRS Form W-9 (blank public form)",
+      "filename": "irs-w9.pdf",
+      "source": {
+        "url": "https://www.irs.gov/pub/irs-pdf/fw9.pdf",
+        "retrievedAt": "2026-09-06T01:28:01.205Z"
+      },
+      "rights": {
+        "basis": "IRS-created federal government content is public domain under the IRS reuse policy; agency marks and credited third-party content are excluded. These are blank IRS forms.",
+        "url": "https://www.irs.gov/about-irs/use-of-content-from-irsgov",
+        "credit": "Source: Internal Revenue Service."
+      },
+      "bytes": 140815,
+      "sha256": "2d420cbb4123dcf1fb82595b2359cfbb5d81f00b9df9d359fcc7af361d093f53",
+      "pageCount": 6,
+      "producer": "Designer 6.5",
+      "creator": "Designer 6.5",
+      "tags": [
+        "adobe-designer",
+        "blank-form",
+        "multi-column"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Request for Taxpayer",
+            "Certification",
+            "Form W-9"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 5727,
+            "independentTextSha256": "28f4f0f920ad04b104f6eecf5856d860ab1c6a218e2aff064343eda956b08523",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 2,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Backup Withholding",
+            "Form 1099-INT",
+            "TIN"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 8259,
+            "independentTextSha256": "e8032c2be22c625812a44c2ec8c97180131c408d5f868abb4735fc029995df76",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public form, not a completed taxpayer document. Frozen test revision; never use this corpus as current tax guidance. Form widgets are not submitted or edited."
+    },
+    {
+      "id": "irs-4506t",
+      "kind": "real-document",
+      "title": "IRS Form 4506-T (blank public form)",
+      "filename": "irs-4506t.pdf",
+      "source": {
+        "url": "https://www.irs.gov/pub/irs-pdf/f4506t.pdf",
+        "retrievedAt": "2026-09-06T01:28:02.021Z"
+      },
+      "rights": {
+        "basis": "IRS-created federal government content is public domain under the IRS reuse policy; agency marks and credited third-party content are excluded. These are blank IRS forms.",
+        "url": "https://www.irs.gov/about-irs/use-of-content-from-irsgov",
+        "credit": "Source: Internal Revenue Service."
+      },
+      "bytes": 680124,
+      "sha256": "4de7303eee766f31deb9afbb66aa538e8e04909d31307c494b328e69fbbe634e",
+      "pageCount": 2,
+      "producer": "Designer 6.5",
+      "creator": "Designer 6.5",
+      "tags": [
+        "adobe-designer",
+        "blank-form",
+        "three-column"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Request for Transcript of Tax Return",
+            "4506-T",
+            "Get Transcript"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 6356,
+            "independentTextSha256": "c67f32b460e85ad9e59c96dfe6d077dd88e62e73985b42efaa0e12bd87a5a9a8",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 2,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Future Developments",
+            "General Instructions",
+            "Chart for individual transcripts"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 11019,
+            "independentTextSha256": "f5ce2c66ac0ca620dddde89701003049f81e2a0b4701c0bb2b822d7e14e18820",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public form, not a completed taxpayer document. Frozen test revision; never use this corpus as current tax guidance. Form widgets are not submitted or edited."
+    },
+    {
+      "id": "irs-941",
+      "kind": "real-document",
+      "title": "IRS Form 941 (blank public form)",
+      "filename": "irs-941.pdf",
+      "source": {
+        "url": "https://www.irs.gov/pub/irs-pdf/f941.pdf",
+        "retrievedAt": "2026-09-06T01:28:02.721Z"
+      },
+      "rights": {
+        "basis": "IRS-created federal government content is public domain under the IRS reuse policy; agency marks and credited third-party content are excluded. These are blank IRS forms.",
+        "url": "https://www.irs.gov/about-irs/use-of-content-from-irsgov",
+        "credit": "Source: Internal Revenue Service."
+      },
+      "bytes": 841648,
+      "sha256": "38a3d8cf7a455101d52543c8c48e66202bc25c189ead878627e35c797c88e2ad",
+      "pageCount": 3,
+      "producer": "Designer 6.5",
+      "creator": "Designer 6.5",
+      "tags": [
+        "adobe-designer",
+        "blank-form",
+        "multi-column"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "QUARTERLY",
+            "Federal Tax Return",
+            "2026"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 3397,
+            "independentTextSha256": "456001da44a2c78fb27c8c1b35774e10ecc48c3003e7f899976327041bac38fe",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 3,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Payment Voucher",
+            "Making Payments",
+            "Form 941"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 3812,
+            "independentTextSha256": "8afb3041d2809a10c842814ac1ae70375baf7ce565de9c4a578c6012a4ae90ef",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public form, not a completed taxpayer document. Frozen test revision; never use this corpus as current tax guidance. Form widgets are not submitted or edited."
+    },
+    {
+      "id": "irs-w4-spanish",
+      "kind": "real-document",
+      "title": "IRS Form W-4 Spanish (blank public form)",
+      "filename": "irs-w4-spanish.pdf",
+      "source": {
+        "url": "https://www.irs.gov/pub/irs-pdf/fw4sp.pdf",
+        "retrievedAt": "2026-09-06T01:28:03.161Z"
+      },
+      "rights": {
+        "basis": "IRS-created federal government content is public domain under the IRS reuse policy; agency marks and credited third-party content are excluded. These are blank IRS forms.",
+        "url": "https://www.irs.gov/about-irs/use-of-content-from-irsgov",
+        "credit": "Source: Internal Revenue Service."
+      },
+      "bytes": 221927,
+      "sha256": "ecf4480b92488a14a5cee7b8083916ae0a786e0c8cef89c624cb6ff113914c6e",
+      "pageCount": 5,
+      "producer": "Designer 6.5",
+      "creator": "Designer 6.5",
+      "tags": [
+        "adobe-designer",
+        "spanish-embedded-text",
+        "accented-text",
+        "dense-numeric-table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Certificado de Retenciones del Empleado",
+            "Información",
+            "Dirección"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 5686,
+            "independentTextSha256": "cb04a98b56546a3b6c7402fe7c108807d3f5f14502626d8f26d0725be28aef0b",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 5,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Cónyuge Sobreviviente",
+            "Requisitos",
+            "Paga Más Alta"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 5304,
+            "independentTextSha256": "4c39b86a8351211a4bf5f98845f5aae23eae1539c60302a596f57c4655f09f1f",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              611.976,
+              791.968
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public form, not a completed taxpayer document. Frozen test revision; never use this corpus as current tax guidance. Form widgets are not submitted or edited."
+    },
+    {
+      "id": "cfpb-savings",
+      "kind": "real-document",
+      "title": "CFPB Your Money Your Goals: Savings Plan (blank worksheet)",
+      "filename": "cfpb-savings.pdf",
+      "source": {
+        "url": "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_savings_plan_tool_2018-11_ADA.pdf",
+        "retrievedAt": "2026-09-06T01:28:05.098Z"
+      },
+      "rights": {
+        "basis": "CFPB-created information is public domain under the CFPB website policy; agency marks and credited third-party content are excluded. These are blank CFPB worksheets.",
+        "url": "https://www.consumerfinance.gov/privacy/website-privacy-policy/",
+        "credit": "Source: Consumer Financial Protection Bureau."
+      },
+      "bytes": 79250,
+      "sha256": "cf2cd999815792281b9639ee41536f591fed42fb9c2406b149a06dbae637be3e",
+      "pageCount": 3,
+      "producer": "Adobe PDF Library 15.0",
+      "creator": "Adobe InDesign CC 13.1 (Macintosh)",
+      "tags": [
+        "indesign-export",
+        "tagged-pdf",
+        "blank-worksheet",
+        "table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Savings plan",
+            "weekly savings target",
+            "unexpected expenses"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1257,
+            "independentTextSha256": "e7771479d4cd077f24617d4ba149a5d859982706f987f4445b8abfefe9a08b0c",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 2,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "savings target",
+            "emergency fund",
+            "$1,000"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 891,
+            "independentTextSha256": "a5cf30c301ffab6f1841d92454eef9b6d1fa08e0e88a6e348eab00d4add78661",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public worksheet. Some icon-font and accessible alternative text can enter extraction. Table reading order and numeric cell associations require manual review."
+    },
+    {
+      "id": "cfpb-spending",
+      "kind": "real-document",
+      "title": "CFPB Your Money Your Goals: Spending Tracker (blank worksheet)",
+      "filename": "cfpb-spending.pdf",
+      "source": {
+        "url": "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_spending_tracker_2018-11_ADA.pdf",
+        "retrievedAt": "2026-09-06T01:28:05.894Z"
+      },
+      "rights": {
+        "basis": "CFPB-created information is public domain under the CFPB website policy; agency marks and credited third-party content are excluded. These are blank CFPB worksheets.",
+        "url": "https://www.consumerfinance.gov/privacy/website-privacy-policy/",
+        "credit": "Source: Consumer Financial Protection Bureau."
+      },
+      "bytes": 285736,
+      "sha256": "da786ef97c84ee36c618c0a2a113649bdfcaf65554f568b543b9a70d2a32ec31",
+      "pageCount": 4,
+      "producer": "Adobe PDF Library 15.0",
+      "creator": "Adobe InDesign CC 13.1 (Macintosh)",
+      "tags": [
+        "indesign-export",
+        "tagged-pdf",
+        "icon-font",
+        "table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Spending tracker",
+            "income and expenses",
+            "priorities"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1983,
+            "independentTextSha256": "db9ebb7388c60cbdf5a5e867755c868be3efb4af8aee3194f63a3dfe2ee3fdab",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 3,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "spending habits",
+            "CATEGORY TOTALS",
+            "Total spending this month"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1484,
+            "independentTextSha256": "2dabe3482f67b212f7b0019b87c0ca692d703105026fe6d8b5d7f1a015d93b0c",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public worksheet. Some icon-font and accessible alternative text can enter extraction. Table reading order and numeric cell associations require manual review."
+    },
+    {
+      "id": "cfpb-cashflow",
+      "kind": "real-document",
+      "title": "CFPB Your Money Your Goals: Cash Flow Budget (blank worksheet)",
+      "filename": "cfpb-cashflow.pdf",
+      "source": {
+        "url": "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_cash_flow_budget_tool_2018-11_ADA.pdf",
+        "retrievedAt": "2026-09-06T01:28:06.260Z"
+      },
+      "rights": {
+        "basis": "CFPB-created information is public domain under the CFPB website policy; agency marks and credited third-party content are excluded. These are blank CFPB worksheets.",
+        "url": "https://www.consumerfinance.gov/privacy/website-privacy-policy/",
+        "credit": "Source: Consumer Financial Protection Bureau."
+      },
+      "bytes": 129351,
+      "sha256": "e82ef79fb5d9a4cf7c94b7157a8c36c7546bf94afd9db1ca383050253332b425",
+      "pageCount": 4,
+      "producer": "Adobe PDF Library 15.0",
+      "creator": "Adobe InDesign CC 13.1 (Macintosh)",
+      "tags": [
+        "indesign-export",
+        "tagged-pdf",
+        "icon-font",
+        "table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "cash flow budget",
+            "income and expenses",
+            "week to week"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1698,
+            "independentTextSha256": "eff2a2602e5454a0b3e107a50105d5692d4cb4dc6358ca6a59565b6bfeae582c",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 3,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "BEGINNING WEEKLY BALANCE",
+            "Housing subsidy",
+            "ENDING WEEKLY BALANCE"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 758,
+            "independentTextSha256": "6f5f7d0ab0436f6f0020dd34b9ef42685618b559e494d4d9bc5eba0a146ec30d",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public worksheet. Some icon-font and accessible alternative text can enter extraction. Table reading order and numeric cell associations require manual review."
+    },
+    {
+      "id": "cfpb-debt",
+      "kind": "real-document",
+      "title": "CFPB Your Money Your Goals: Debt Log (blank worksheet)",
+      "filename": "cfpb-debt.pdf",
+      "source": {
+        "url": "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_debt_log_tool_2018-11_ADA.pdf",
+        "retrievedAt": "2026-09-06T01:28:06.558Z"
+      },
+      "rights": {
+        "basis": "CFPB-created information is public domain under the CFPB website policy; agency marks and credited third-party content are excluded. These are blank CFPB worksheets.",
+        "url": "https://www.consumerfinance.gov/privacy/website-privacy-policy/",
+        "credit": "Source: Consumer Financial Protection Bureau."
+      },
+      "bytes": 94800,
+      "sha256": "92242e407d8cb2a517ba66c0f319eb2e8df5b80bc72bc507fb4eea45757459ff",
+      "pageCount": 4,
+      "producer": "Adobe PDF Library 15.0",
+      "creator": "Adobe InDesign CC 13.1 (Macintosh)",
+      "tags": [
+        "indesign-export",
+        "tagged-pdf",
+        "icon-font",
+        "table"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Debt log",
+            "credit cards",
+            "mortgages"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 1830,
+            "independentTextSha256": "6acfef6f23b9220d9af9a08b8311108037b528b534ed4efdc13d0bb07ec31375",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 3,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "monthly debt payment",
+            "Credit card debt",
+            "Common debt types"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 958,
+            "independentTextSha256": "2d238beb984b795a2c3fa4d4de5d4be7cc5b515fd9c5ca2ed56d0e8726a6b268",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "notes": "Blank public worksheet. Some icon-font and accessible alternative text can enter extraction. Table reading order and numeric cell associations require manual review."
+    },
+    {
+      "id": "nist-sp800-145",
+      "kind": "real-document",
+      "title": "NIST SP 800-145: The NIST Definition of Cloud Computing",
+      "filename": "nist-sp800-145.pdf",
+      "source": {
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+        "retrievedAt": "2026-09-06T01:28:49.727Z"
+      },
+      "rights": {
+        "basis": "NIST Technical Series reprint/reuse policy; federal employee works are US public domain. NIST additionally grants worldwide reuse to the extent it holds copyright. Third-party credits remain applicable.",
+        "url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+        "credit": "Republished courtesy of the National Institute of Standards and Technology."
+      },
+      "bytes": 85781,
+      "sha256": "7b0c1a9fdfc67218b8ba2098f448c100c27070db91736b3c87fed63bfa21d418",
+      "pageCount": 7,
+      "producer": "Adobe PDF Library 10.0",
+      "creator": "Acrobat PDFMaker 10.1 for Word",
+      "tags": [
+        "office-export",
+        "technical-report"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 6,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Cloud computing",
+            "Essential Characteristics",
+            "Resource pooling"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 3811,
+            "independentTextSha256": "8d9f99c4d40dc0e20ca578288314c39e6ea11f567ae24400eaa21aad61915aa9",
+            "visualReview": "Embedded text independently inspected; full visual review remains open",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 7,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "Deployment Models",
+            "Private cloud",
+            "Hybrid cloud"
+          ],
+          "minimumCharacters": 70,
+          "sourceInspection": {
+            "independentExtractor": "pypdf (not the application PDF.js engine)",
+            "embeddedCharacters": 2415,
+            "independentTextSha256": "df6fcee3b9450703b7e85632f22c7c50b20a3665fc70e0eac9f138c8ab3ffff6",
+            "visualReview": "Poppler-rendered page reviewed on 2026-09-06",
+            "pageSizePoints": [
+              612.0,
+              792.0
+            ],
+            "rotationDegrees": 0
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "fixture-mixed",
+      "kind": "synthetic",
+      "title": "mixed: project-generated synthetic fixture",
+      "filename": "fixture-mixed.pdf",
+      "source": {
+        "generatedPath": "tmp/pdf-phase0/fixtures/mixed.pdf",
+        "generator": "tools/pdf-phase0/scripts/generate-fixtures.mjs",
+        "generatorSha256": "8b566bd43cabcf84a589abdc93e54ba10d18092216efe28841c7e846fbad1ab2"
+      },
+      "rights": {
+        "basis": "Original project-generated artificial content for local tests, not a real source document. PDFKit is MIT; font-dependent fixtures reuse pinned PDF.js support fonts under their original notices.",
+        "url": "tools/pdf-phase0/fixtures/README.md",
+        "credit": "LocalOCR test generator"
+      },
+      "bytes": 20999,
+      "sha256": "86df2a6ede2422351456ac9d00188f25158178163eceb7c7af5e0db9b06d5fc0",
+      "pageCount": 2,
+      "tags": [
+        "mixed-selectable-scanned"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "MIXED SELECTABLE PAGE",
+            "112358"
+          ],
+          "minimumCharacters": 20,
+          "sourceInspection": {
+            "basis": "Generator source and sentinels independently inspected"
+          },
+          "manualUsefulnessReview": "OPEN"
+        },
+        {
+          "number": 2,
+          "expectedMethod": "OCR",
+          "expectedTokens": [
+            "PDF SCAN PAGE",
+            "314159"
+          ],
+          "minimumCharacters": 20,
+          "sourceInspection": {
+            "basis": "Generator source and sentinels independently inspected"
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "fixture-rotated",
+      "kind": "synthetic",
+      "title": "rotated: project-generated synthetic fixture",
+      "filename": "fixture-rotated.pdf",
+      "source": {
+        "generatedPath": "tmp/pdf-phase0/fixtures/rotated.pdf",
+        "generator": "tools/pdf-phase0/scripts/generate-fixtures.mjs",
+        "generatorSha256": "8b566bd43cabcf84a589abdc93e54ba10d18092216efe28841c7e846fbad1ab2"
+      },
+      "rights": {
+        "basis": "Original project-generated artificial content for local tests, not a real source document. PDFKit is MIT; font-dependent fixtures reuse pinned PDF.js support fonts under their original notices.",
+        "url": "tools/pdf-phase0/fixtures/README.md",
+        "credit": "LocalOCR test generator"
+      },
+      "bytes": 20304,
+      "sha256": "a5d120ab7ccf07af2f999622f19fbedb88b890aeb0d28b6f4ebfd6d0a708a1bd",
+      "pageCount": 1,
+      "tags": [
+        "rotated-90",
+        "image-only"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "OCR",
+          "expectedTokens": [
+            "PDF SCAN PAGE",
+            "314159"
+          ],
+          "minimumCharacters": 20,
+          "sourceInspection": {
+            "basis": "Generator source and sentinels independently inspected"
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "fixture-password",
+      "kind": "synthetic",
+      "title": "password: project-generated synthetic fixture",
+      "filename": "fixture-password.pdf",
+      "source": {
+        "generatedPath": "tmp/pdf-phase0/fixtures/password.pdf",
+        "generator": "tools/pdf-phase0/scripts/generate-fixtures.mjs",
+        "generatorSha256": "8b566bd43cabcf84a589abdc93e54ba10d18092216efe28841c7e846fbad1ab2"
+      },
+      "rights": {
+        "basis": "Original project-generated artificial content for local tests, not a real source document. PDFKit is MIT; font-dependent fixtures reuse pinned PDF.js support fonts under their original notices.",
+        "url": "tools/pdf-phase0/fixtures/README.md",
+        "credit": "LocalOCR test generator"
+      },
+      "bytes": 1976,
+      "sha256": "3816386674642c87edb4d53c94ee89d573e6abea43428c3385a40aa8d4fcb030",
+      "pageCount": 1,
+      "tags": [
+        "password-rc4-test-only"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "PASSWORD FIXTURE OPEN",
+            "424242"
+          ],
+          "minimumCharacters": 20,
+          "sourceInspection": {
+            "basis": "Generator source and sentinels independently inspected"
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ],
+      "testPassword": "phase0-only"
+    },
+    {
+      "id": "fixture-embedded-font",
+      "kind": "synthetic",
+      "title": "embedded-font: project-generated synthetic fixture",
+      "filename": "fixture-embedded-font.pdf",
+      "source": {
+        "generatedPath": "tmp/pdf-phase0/fixtures/embedded-font.pdf",
+        "generator": "tools/pdf-phase0/scripts/generate-fixtures.mjs",
+        "generatorSha256": "8b566bd43cabcf84a589abdc93e54ba10d18092216efe28841c7e846fbad1ab2"
+      },
+      "rights": {
+        "basis": "Original project-generated artificial content for local tests, not a real source document. PDFKit is MIT; font-dependent fixtures reuse pinned PDF.js support fonts under their original notices.",
+        "url": "tools/pdf-phase0/fixtures/README.md",
+        "credit": "LocalOCR test generator"
+      },
+      "bytes": 10411,
+      "sha256": "6473061b44167d3e42d7722fc71c19a3c24a2556ce1801b76bb1891008920035",
+      "pageCount": 1,
+      "tags": [
+        "type0-subset-font",
+        "cyrillic"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "ПДФ ФАЗА НОЛЬ",
+            "24680",
+            "ПРИВЕТ"
+          ],
+          "minimumCharacters": 20,
+          "sourceInspection": {
+            "basis": "Generator source and sentinels independently inspected"
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "fixture-cmap-font",
+      "kind": "synthetic",
+      "title": "cmap-font: project-generated synthetic fixture",
+      "filename": "fixture-cmap-font.pdf",
+      "source": {
+        "generatedPath": "tmp/pdf-phase0/fixtures/cmap-font.pdf",
+        "generator": "tools/pdf-phase0/scripts/generate-fixtures.mjs",
+        "generatorSha256": "8b566bd43cabcf84a589abdc93e54ba10d18092216efe28841c7e846fbad1ab2"
+      },
+      "rights": {
+        "basis": "Original project-generated artificial content for local tests, not a real source document. PDFKit is MIT; font-dependent fixtures reuse pinned PDF.js support fonts under their original notices.",
+        "url": "tools/pdf-phase0/fixtures/README.md",
+        "credit": "LocalOCR test generator"
+      },
+      "bytes": 1230,
+      "sha256": "574179b486e229dfa9659412b396361b0090138a9cd8d208675b8e926a5122b3",
+      "pageCount": 1,
+      "tags": [
+        "adobe-cmap",
+        "japanese"
+      ],
+      "mode": "automatic",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "PDF text",
+          "expectedTokens": [
+            "CMAP SUPPORT SENTINEL",
+            "97531",
+            "日本"
+          ],
+          "minimumCharacters": 20,
+          "sourceInspection": {
+            "basis": "Generator source and sentinels independently inspected"
+          },
+          "manualUsefulnessReview": "OPEN"
+        }
+      ]
+    },
+    {
+      "id": "fixture-benchmark-10",
+      "kind": "synthetic",
+      "title": "benchmark-10: project-generated synthetic fixture",
+      "filename": "fixture-benchmark-10.pdf",
+      "source": {
+        "generatedPath": "tmp/pdf-phase0/fixtures/benchmark-10.pdf",
+        "generator": "tools/pdf-phase0/scripts/generate-fixtures.mjs",
+        "generatorSha256": "8b566bd43cabcf84a589abdc93e54ba10d18092216efe28841c7e846fbad1ab2"
+      },
+      "rights": {
+        "basis": "Original project-generated artificial content for local tests, not a real source document. PDFKit is MIT; font-dependent fixtures reuse pinned PDF.js support fonts under their original notices.",
+        "url": "tools/pdf-phase0/fixtures/README.md",
+        "credit": "LocalOCR test generator"
+      },
+      "bytes": 7260,
+      "sha256": "6f6de53b3103a73d1f8f14aa124831d782c87c5957c0324ac17f65a116b95507",
+      "pageCount": 10,
+      "tags": [
+        "cancellation",
+        "repeated-image-only"
+      ],
+      "mode": "control",
+      "pages": []
+    },
+    {
+      "id": "fixture-benchmark-26",
+      "kind": "synthetic",
+      "title": "benchmark-26: project-generated synthetic fixture",
+      "filename": "fixture-benchmark-26.pdf",
+      "source": {
+        "generatedPath": "tmp/pdf-phase0/fixtures/benchmark-26.pdf",
+        "generator": "tools/pdf-phase0/scripts/generate-fixtures.mjs",
+        "generatorSha256": "8b566bd43cabcf84a589abdc93e54ba10d18092216efe28841c7e846fbad1ab2"
+      },
+      "rights": {
+        "basis": "Original project-generated artificial content for local tests, not a real source document. PDFKit is MIT; font-dependent fixtures reuse pinned PDF.js support fonts under their original notices.",
+        "url": "tools/pdf-phase0/fixtures/README.md",
+        "credit": "LocalOCR test generator"
+      },
+      "bytes": 11437,
+      "sha256": "6846895e07788cbb92b3cf77625487c5226181164283a2368936a723ca4b92d0",
+      "pageCount": 26,
+      "tags": [
+        "ocr-page-limit",
+        "repeated-image-only"
+      ],
+      "mode": "control",
+      "pages": []
+    },
+    {
+      "id": "fixture-function_based_shading_cmyk",
+      "kind": "upstream-decoder-fixture",
+      "title": "function_based_shading_cmyk: Mozilla PDF.js decoder fixture",
+      "filename": "fixture-function_based_shading_cmyk.pdf",
+      "source": {
+        "base64Path": "tools/pdf-phase0/fixtures/upstream/function_based_shading_cmyk.pdf.base64",
+        "url": "https://github.com/mozilla/pdf.js/blob/0365cbde028bd92e58f2dab1bb70cd30ac7acfd7/test/pdfs/function_based_shading_cmyk.pdf"
+      },
+      "rights": {
+        "basis": "Apache-2.0, official PDF.js pinned v6.2.108 fixture; see existing tools/pdf-phase0/fixtures/README.md.",
+        "url": "https://github.com/mozilla/pdf.js/blob/0365cbde028bd92e58f2dab1bb70cd30ac7acfd7/LICENSE",
+        "credit": "Mozilla PDF.js contributors"
+      },
+      "bytes": 3266,
+      "sha256": "c624d33b595af80746dd96f6440d335a30b1bee3e484d9b0b2cfb0cd54c62be3",
+      "pageCount": 1,
+      "tags": [
+        "icc",
+        "qcms"
+      ],
+      "mode": "ocr-all",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "OCR",
+          "expectedTokens": [],
+          "minimumCharacters": 0,
+          "sourceInspection": {
+            "basis": "Existing vetted PDF.js fixture provenance and decoder test"
+          },
+          "manualUsefulnessReview": "N/A - decoder smoke only"
+        }
+      ],
+      "expectedAssets": [
+        "/pdf/6.2.108/wasm/qcms_bg.wasm",
+        "/pdf/6.2.108/iccs/CGATS001Compat-v2-micro.icc"
+      ]
+    },
+    {
+      "id": "fixture-jpx_smaskindata",
+      "kind": "upstream-decoder-fixture",
+      "title": "jpx_smaskindata: Mozilla PDF.js decoder fixture",
+      "filename": "fixture-jpx_smaskindata.pdf",
+      "source": {
+        "base64Path": "tools/pdf-phase0/fixtures/upstream/jpx_smaskindata.pdf.base64",
+        "url": "https://github.com/mozilla/pdf.js/blob/0365cbde028bd92e58f2dab1bb70cd30ac7acfd7/test/pdfs/jpx_smaskindata.pdf"
+      },
+      "rights": {
+        "basis": "Apache-2.0, official PDF.js pinned v6.2.108 fixture; see existing tools/pdf-phase0/fixtures/README.md.",
+        "url": "https://github.com/mozilla/pdf.js/blob/0365cbde028bd92e58f2dab1bb70cd30ac7acfd7/LICENSE",
+        "credit": "Mozilla PDF.js contributors"
+      },
+      "bytes": 2515,
+      "sha256": "a82813559c74f074b0caf92c80875fc018acb737269a2af5508c7e083b2a5fd3",
+      "pageCount": 1,
+      "tags": [
+        "jpx",
+        "openjpeg"
+      ],
+      "mode": "ocr-all",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "OCR",
+          "expectedTokens": [],
+          "minimumCharacters": 0,
+          "sourceInspection": {
+            "basis": "Existing vetted PDF.js fixture provenance and decoder test"
+          },
+          "manualUsefulnessReview": "N/A - decoder smoke only"
+        }
+      ],
+      "expectedAssets": [
+        "/pdf/6.2.108/wasm/openjpeg.wasm"
+      ]
+    },
+    {
+      "id": "fixture-jbig2_file_header",
+      "kind": "upstream-decoder-fixture",
+      "title": "jbig2_file_header: Mozilla PDF.js decoder fixture",
+      "filename": "fixture-jbig2_file_header.pdf",
+      "source": {
+        "base64Path": "tools/pdf-phase0/fixtures/upstream/jbig2_file_header.pdf.base64",
+        "url": "https://github.com/mozilla/pdf.js/blob/0365cbde028bd92e58f2dab1bb70cd30ac7acfd7/test/pdfs/jbig2_file_header.pdf"
+      },
+      "rights": {
+        "basis": "Apache-2.0, official PDF.js pinned v6.2.108 fixture; see existing tools/pdf-phase0/fixtures/README.md.",
+        "url": "https://github.com/mozilla/pdf.js/blob/0365cbde028bd92e58f2dab1bb70cd30ac7acfd7/LICENSE",
+        "credit": "Mozilla PDF.js contributors"
+      },
+      "bytes": 774,
+      "sha256": "5edb6045fc86ee5fa8e837685a35a57014764d1f72518e136e5e8f13fcf92c8d",
+      "pageCount": 1,
+      "tags": [
+        "jbig2"
+      ],
+      "mode": "ocr-all",
+      "pages": [
+        {
+          "number": 1,
+          "expectedMethod": "OCR",
+          "expectedTokens": [],
+          "minimumCharacters": 0,
+          "sourceInspection": {
+            "basis": "Existing vetted PDF.js fixture provenance and decoder test"
+          },
+          "manualUsefulnessReview": "N/A - decoder smoke only"
+        }
+      ],
+      "expectedAssets": [
+        "/pdf/6.2.108/wasm/jbig2.wasm"
+      ]
+    }
+  ]
+}

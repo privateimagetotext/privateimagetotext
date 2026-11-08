@@ -1,0 +1,4 @@
+Contact: mailto:contact@privateimagetotext.com
+Expires: 2027-08-01T00:00:00.000Z
+Canonical: https://privateimagetotext.com/.well-known/security.txt
+Preferred-Languages: en

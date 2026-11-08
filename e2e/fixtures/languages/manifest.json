@@ -1,0 +1,20 @@
+[
+  {
+    "id": "spa",
+    "family": "Latin",
+    "text": "El texto permanece en este dispositivo.",
+    "font": "Arial"
+  },
+  {
+    "id": "hin",
+    "family": "Devanagari",
+    "text": "नमस्ते दुनिया",
+    "font": "Nirmala UI"
+  },
+  {
+    "id": "tha",
+    "family": "Thai",
+    "text": "ภาษาไทย",
+    "font": "Nirmala UI"
+  }
+]

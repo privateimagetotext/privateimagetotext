@@ -1,0 +1,441 @@
+.stego-analysis-page {
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+}
+
+.stego-hero,
+.stego-workspace,
+.stego-explainer,
+.stego-analysis-page > .helpful-guides {
+  width: min(100% - 2rem, var(--max-width));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.stego-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  gap: 2rem 4rem;
+  padding: clamp(2.5rem, 7vw, 6.5rem) 0 clamp(2rem, 5vw, 4rem);
+}
+
+.stego-hero h1 {
+  max-width: 14ch;
+  margin-top: 0.65rem;
+  font-size: clamp(2.4rem, 5.6vw, 5.6rem);
+  font-weight: 620;
+  letter-spacing: -0.06em;
+}
+
+.stego-hero__copy {
+  align-self: end;
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
+.stego-hero__copy .trust-markers {
+  margin-top: 1.25rem;
+}
+
+.stego-workspace {
+  border: 1px solid var(--border-strong);
+  border-radius: 0.85rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: clip;
+}
+
+.stego-dropzone {
+  min-height: 30rem;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.85rem;
+  padding: clamp(2rem, 6vw, 6rem) clamp(1rem, 4vw, 6rem);
+  background:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px),
+    color-mix(in srgb, var(--surface-soft) 40%, var(--surface));
+  background-size: 8px 8px;
+  text-align: center;
+}
+
+.stego-dropzone.is-dragging {
+  background-color: var(--accent-soft);
+  box-shadow: inset 0 0 0 3px var(--accent);
+}
+
+.stego-dropzone h2 {
+  font-size: clamp(1.75rem, 4vw, 3.2rem);
+  letter-spacing: -0.045em;
+}
+
+.stego-dropzone > p:not(.section-index) {
+  max-width: 44rem;
+  color: var(--text-secondary);
+}
+
+.stego-dropzone small,
+.stego-muted {
+  color: var(--text-muted);
+}
+
+.stego-results__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem clamp(1rem, 2.5vw, 2rem);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.stego-results__header h2 {
+  margin-top: 0.35rem;
+  overflow-wrap: anywhere;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.stego-results__header > div:first-child > p:last-child {
+  margin-top: 0.35rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.stego-results__actions,
+.stego-actions,
+.stego-plane-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stego-actions {
+  margin: 1rem 0;
+}
+
+.stego-progress,
+.stego-error {
+  margin: 1rem clamp(1rem, 2.5vw, 2rem);
+}
+
+.stego-error {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.stego-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding: 0.85rem clamp(1rem, 2.5vw, 2rem);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.stego-panel {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2.5vw, 2rem);
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.stego-panel:last-child {
+  border-bottom: 0;
+}
+
+.stego-panel h3 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  letter-spacing: -0.03em;
+}
+
+.stego-panel h4 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.stego-panel h5 {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 0.95rem;
+}
+
+.stego-panel > p,
+.stego-panel .stego-muted {
+  max-width: var(--reading-width);
+}
+
+.stego-plane-controls {
+  margin: 1rem 0;
+}
+
+.stego-field {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stego-field select,
+.stego-field input {
+  min-height: 2.75rem;
+  max-width: 100%;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.45rem;
+  background: var(--surface-raised);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 500;
+}
+
+.stego-viewer {
+  display: grid;
+  place-items: center;
+  min-height: 12rem;
+  max-height: 70vh;
+  padding: 0.75rem;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background:
+    linear-gradient(45deg, var(--surface-soft) 25%, transparent 25% 75%, var(--surface-soft) 75%),
+    linear-gradient(45deg, var(--surface-soft) 25%, transparent 25% 75%, var(--surface-soft) 75%),
+    var(--surface-raised);
+  background-position: 0 0, 0.65rem 0.65rem;
+  background-size: 1.3rem 1.3rem;
+}
+
+.stego-viewer:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.stego-viewer canvas {
+  max-width: 100%;
+  max-height: calc(70vh - 1.5rem);
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.stego-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stego-options--inline {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 18rem));
+  margin-bottom: 0.75rem;
+}
+
+.stego-options fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0.75rem 1rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+}
+
+.stego-options legend {
+  padding: 0 0.3rem;
+  font-weight: 700;
+}
+
+.stego-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.25rem;
+  margin-right: 0.9rem;
+}
+
+.stego-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+}
+
+.stego-hex,
+.stego-strings,
+.stego-table-wrap {
+  max-height: 22rem;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface-raised);
+}
+
+.stego-hex:focus-visible,
+.stego-strings:focus-visible,
+.stego-table-wrap:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.stego-hex pre {
+  margin: 0;
+  padding: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  white-space: pre;
+}
+
+.stego-strings ol {
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+.stego-strings li {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.2rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.stego-strings__offset {
+  color: var(--text-muted);
+}
+
+.stego-strings__text {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.stego-callout {
+  display: grid;
+  gap: 0.85rem;
+  justify-items: start;
+  padding: 1rem;
+  border: 1px solid var(--warning);
+  border-radius: 0.55rem;
+  background: var(--warning-soft);
+}
+
+.stego-callout .stego-hex {
+  width: 100%;
+}
+
+.stego-list {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.stego-list code,
+.stego-facts code,
+.stego-table-wrap code {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.stego-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0.9rem 1.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.stego-facts dt {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.stego-facts dd {
+  margin: 0.15rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.stego-facts__wide {
+  grid-column: 1 / -1;
+}
+
+.stego-details {
+  margin-top: 0.75rem;
+}
+
+.stego-details summary {
+  min-height: 2.5rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.stego-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.stego-table-wrap th,
+.stego-table-wrap td {
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.stego-explainer {
+  padding: clamp(3rem, 7vw, 5rem) 0 0;
+}
+
+.stego-explainer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stego-explainer__grid article {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--surface);
+}
+
+.stego-explainer__grid h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.stego-explainer__grid p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 760px) {
+  .stego-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .stego-strings li {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.stego-plane-controls {
+  align-items: end;
+}
+
+.stego-plane-controls .stego-field {
+  flex: 1 1 16rem;
+  max-width: 24rem;
+  order: -1;
+}
+
+.stego-sixteen {
+  display: block;
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+}

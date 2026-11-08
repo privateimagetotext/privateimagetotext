@@ -1,0 +1,7 @@
+$ pnpm run verify
+status = "LOCAL_ONLY"
+const retryCount = 3;
+if (code === "ERR-4097") {
+  throw new Error("worker.ts:42");
+}
+done in 1.27s

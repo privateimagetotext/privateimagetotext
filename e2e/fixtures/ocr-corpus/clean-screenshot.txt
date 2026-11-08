@@ -1,0 +1,4 @@
+PRIVATE IMAGE TO TEXT
+Status: Ready for local OCR
+Reference: SCREEN-7429
+No upload required.

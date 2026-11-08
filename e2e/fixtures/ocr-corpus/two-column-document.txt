@@ -1,0 +1,8 @@
+LEFT COLUMN
+Local preparation happens in this tab.
+Column reference COLUMN-A12
+First sections should read before the right side.
+RIGHT COLUMN
+Second sections retain their own order.
+Column reference COLUMN-B34
+Review the combined result carefully.

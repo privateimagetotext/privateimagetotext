@@ -1,0 +1,39 @@
+LONG PRINTED DOCUMENT
+Document PAGE-7001
+This synthetic page checks text near the top of a long local scan.
+Every sentence was written for this browser-only OCR benchmark.
+The original image remains on the device throughout recognition.
+Section one describes a clear printed page with ordinary punctuation.
+The layout uses one column so reading order has one correct answer.
+Small details should remain legible without shrinking the entire page.
+Local preparation may divide the page into bounded working sections.
+Each section must stay within the documented side and pixel limits.
+The sections overlap so a line near an edge is not silently discarded.
+Repeated content must not appear twice in the final recognised text.
+Section two begins after the first third of the synthetic document.
+Coordinates remain relative to the original source image and crop.
+Manual quarter turns are represented by an explicit oriented space.
+Prepared pixels map back through a recorded scale and section offset.
+Fine rotation remains separate from the manual quarter-turn mapping.
+No word boxes are drawn until their preview contract is implemented.
+MIDDLE-4404
+This middle marker proves that recognition continued across sections.
+Cancellation must stop the active worker and release the current tile.
+Clear must also release decoded images, canvases and object references.
+Late results must not replace a newer operation or a cleared workspace.
+The same local worker can process each section sequentially in memory.
+No image data or recognised text is sent to an external service.
+Cached same-origin assets keep the workflow available while offline.
+Section three checks the lower portion of the long printed document.
+Numbers 2048, 4096 and 16777216 are intentional benchmark content.
+Punctuation includes commas, colons, brackets [safe], and slash marks.
+The final output should preserve every distinct sentence exactly once.
+Native detail is useful for long receipts and tall photographed pages.
+Square and landscape images continue to use the existing single canvas.
+Ambiguous layouts still require review and are not solved by tiling.
+This slice does not add result candidates or uncertain-word overlays.
+It does not add perspective correction, cloud OCR or another model.
+The benchmark records runtime as evidence, not as a speed guarantee.
+The user can still inspect, edit, copy and download the local result.
+END-9909
+This final marker proves that the bottom of the page was recognised.

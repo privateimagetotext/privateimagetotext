@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Internal PDF OCR test harness</title>
+  </head>
+  <body>
+    <main>
+      <h1>Internal PDF OCR test harness</h1>
+      <p>This internal page processes only the file selected below.</p>
+      <label>
+        Synthetic fixture
+        <input id="pdf-file" type="file" accept="application/pdf,.pdf" />
+      </label>
+      <label>
+        Experiment
+        <select id="scenario">
+          <option value="selectable">Selectable text</option>
+          <option value="scanned">Scanned-page OCR</option>
+          <option value="mixed">Mixed PDF</option>
+          <option value="font">Font and CMap comparison</option>
+          <option value="rotated">Rotated page</option>
+          <option value="render-cancel">Render cancellation</option>
+          <option value="cleanup">Repeated cleanup</option>
+          <option value="benchmark">Sequential benchmark</option>
+          <option value="password">Password flow</option>
+          <option value="adapter-password">Production adapter password flow</option>
+          <option value="adapter-render-cancel">Production adapter cancellation</option>
+          <option value="decoder">Production decoder fixture</option>
+          <option value="phase1b-automatic">Phase 1B automatic extraction</option>
+          <option value="phase1b-embedded-only">Phase 1B embedded text only</option>
+          <option value="phase1b-ocr-all">Phase 1B OCR all selected pages</option>
+          <option value="phase1b-page-range">Phase 1B page-range extraction</option>
+          <option value="phase1b-ocr-limit">Phase 1B OCR-limit preflight</option>
+          <option value="phase1b-force-ocr">Phase 1B forced page OCR</option>
+          <option value="phase1b-cancel-after-one">Phase 1B cancellation</option>
+          <option value="phase1b-benchmark">Phase 1B hybrid benchmark</option>
+        </select>
+      </label>
+      <label>
+        <input id="cancel-after-one" type="checkbox" />
+        Cancel benchmark after one page
+      </label>
+      <button id="run" type="button">Run experiment</button>
+
+      <section id="password-panel" hidden>
+        <label>
+          Test password
+          <input id="password" type="password" autocomplete="off" />
+        </label>
+        <button id="submit-password" type="button">Submit password</button>
+        <button id="cancel-password" type="button">Cancel</button>
+        <output id="password-reason"></output>
+      </section>
+
+      <output id="status" role="status" aria-live="polite">Idle</output>
+      <canvas id="page-canvas" aria-label="Rendered PDF page"></canvas>
+      <pre id="result" aria-label="Experiment result"></pre>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

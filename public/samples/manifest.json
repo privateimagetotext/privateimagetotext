@@ -1,0 +1,30 @@
+{
+  "description": "Original synthetic project fixtures, published as explicit opt-in OCR samples. No user content.",
+  "generator": "scripts/generate-ocr-corpus.mjs",
+  "samples": [
+    {
+      "path": "/samples/clean-screenshot.png",
+      "source": "e2e/fixtures/ocr-corpus/clean-screenshot.png",
+      "sha256": "26be6100dbf819e6b2de90ce9da1ec3f6b3db096bd95ee1b17282cc9a715c6f2"
+    },
+    {
+      "path": "/samples/receipt.png",
+      "source": "e2e/fixtures/ocr-corpus/receipt.png",
+      "sha256": "0884a255d1a4c0517e949923a7e3a37f889d8281bb70ed7dc4121a8a372e4561"
+    },
+    {
+      "path": "/samples/code-terminal.png",
+      "source": "e2e/fixtures/ocr-corpus/code-terminal.png",
+      "sha256": "67bc69076973991fa7af901787ea6c50891242b98022291aa383f3f734f38d9b"
+    },
+    {
+      "path": "/samples/sample.png",
+      "source": "public/samples/sample.png",
+      "generator": "scripts/generate-ocr-sample.mjs",
+      "width": 900,
+      "height": 400,
+      "bytes": 32133,
+      "sha256": "689b1607af6e808d57a6fe16e34af52b9b71605bdd345de32bf2b45b98a0a2e7"
+    }
+  ]
+}
