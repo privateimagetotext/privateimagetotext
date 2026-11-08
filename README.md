@@ -116,6 +116,9 @@ Cloudflare Workers static assets.
 
 ## Security, contributing and licence
 
+- **How it's built:** Simon develops this with AI coding assistance (Claude
+  Code). He reviews every change before it goes live, and CI runs the test
+  suite in Chromium, Firefox and WebKit on every pull request and on `main`.
 - Report security issues privately: see [SECURITY.md](SECURITY.md).
 - Contributions: see [CONTRIBUTING.md](CONTRIBUTING.md). The privacy
   invariants come first.

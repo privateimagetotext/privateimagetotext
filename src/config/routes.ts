@@ -34,7 +34,7 @@ export const publicRouteManifest = {
     announcement: "About Private Image to Text page",
     routeType: "content",
     indexable: true,
-    lastModified: "2026-11-07",
+    lastModified: "2026-11-08",
   },
   ...(pdfPublicEnabled ? {
     pdfToText: pdfPublicRouteDefinition,

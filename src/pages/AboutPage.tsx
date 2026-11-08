@@ -22,6 +22,7 @@ export function AboutPage() {
     <section className="content-section" aria-labelledby="about-who">
       <h2 id="about-who">Who runs it</h2>
       <p>I'm {SITE_AUTHOR_NAME}. My background is in cyber security, with a master's degree in the field, CISM certification and other certifications across different areas of cyber security. I bring that background to this project, while keeping its claims specific and open to checking.</p>
+      <p>I build and maintain it with AI coding assistance (Claude Code). I review every change before it goes live, and each change runs through automated tests in Chromium, Firefox and WebKit.</p>
     </section>
     <section className="content-section" aria-labelledby="about-why">
       <h2 id="about-why">Why it exists</h2>
@@ -41,7 +42,8 @@ export function AboutPage() {
     </section>
     <section className="content-section" aria-labelledby="about-source">
       <h2 id="about-source">Source</h2>
-      <p>The source is not public yet. You can inspect the code delivered to your browser and follow the <Link to={routes.verify}>network and storage checks</Link>, but these do not provide an independent source-to-build comparison.</p>
+      <p>The source is public on GitHub at <a href="https://github.com/privateimagetotext/privateimagetotext">privateimagetotext/privateimagetotext</a>. The code is licensed under the GNU AGPL-3.0. Guide text, guide figures and the brand are not covered by that licence; all rights are reserved. The repository is updated with published snapshots, so it can briefly trail the live site.</p>
+      <p>You can read and build the source, inspect the code delivered to your browser and follow the <Link to={routes.verify}>network and storage checks</Link>. There is no reproducible-build check, so none of this proves that the deployed files were built from that exact source.</p>
     </section>
     <section className="content-section" aria-labelledby="about-contact">
       <h2 id="about-contact">Contact</h2>

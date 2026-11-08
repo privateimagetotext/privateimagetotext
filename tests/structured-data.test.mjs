@@ -96,10 +96,11 @@ test("rendered schema matches visible content, route metadata and sitemap dates"
         assert.equal(person.name, "Simon");
         assert.deepEqual(Object.keys(person).sort(), ["@id", "@type", "name"]);
         assert.equal(graph.find((node) => node["@type"] === "Organization").founder["@id"], person["@id"]);
-        assert.match(visible, /source is not public yet/);
+        assert.match(visible, /source is public on GitHub/);
+        assert.ok(document.querySelector('main a[href="https://github.com/privateimagetotext/privateimagetotext"]'));
         assert.match(visible, /master's degree/);
         assert.match(visible, /CISM/);
-        assert.equal(route.lastModified, "2026-11-07T00:00:00Z");
+        assert.equal(route.lastModified, "2026-11-08T00:00:00Z");
         assert.ok(document.querySelector('.app-footer a[href="/about"]'));
       }
     } finally { dom.window.close(); }

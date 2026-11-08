@@ -71,7 +71,7 @@ for (const [width, height] of [[390, 844], [1305, 924]]) {
     await expect(status).toHaveText("Offline: ready for English");
     await page.getByRole("navigation", { name: "Footer navigation" }).getByRole("link", { name: "About", exact: true }).click();
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("About Private Image to Text");
-    await expect(page.getByText("The source is not public yet.", { exact: false })).toBeVisible();
+    await expect(page.getByText("The source is public on GitHub", { exact: false })).toBeVisible();
     await page.reload();
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("About Private Image to Text");
     expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
